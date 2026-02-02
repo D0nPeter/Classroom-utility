@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>  
+    <title> Żabkowe losowanie - solo </title>
+  </head>
+
+  <script src="single.js"></script>
+
+  <body onload="fill_pool()">
+
+    <div class="select_range_form_parent" id="select_range_form_parent" style="display: none;"> 
+      <label for="lower_boundary"> <b> Najniższy numer </b> </label>
+      <input type="number" placeholder="Podaj numer" id="lower_boundary" required>
+      <br> <!-- should be later removed -->
+
+      <label for="upper_boundary"> <b> Najwyższy numer </b></label>
+      <input type="number" placeholder="Podaj numer" id="upper_boundary" required>
+      <br> <!-- should be later removed -->
+
+      <label for="excluded_numbers"> <b> Wykluczone numery </b></label>
+      <input type="tel" placeholder="Podaj numery" id="excluded_numbers">
+      <br> <!-- should be later removed -->
+
+      <button onclick="hide_range_form()"> Anuluj </button>
+      <button onclick="set_values()"> Potwierdź </button>
+    </div>
+
+    <button onclick="show_range_form()"> Modyfikuj wartości </button>
+    <button onclick="fill_pool()"> Restartuj wartości </button> <br> <br>
+    <button onclick="random_single()"> Losuj </button>
+    <p> Wylosowana wartość to: </p>
+    <p id="result_display"> </p>
+  </body>
+</html>
