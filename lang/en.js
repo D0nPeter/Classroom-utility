@@ -1,4 +1,4 @@
-window.translation ={
+window.translation = {
     "title-single": "Single mode",
     "lowest-number": "Lowest number",
     "highest-number": "Highest number",
