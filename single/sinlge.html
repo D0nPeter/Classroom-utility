@@ -7,10 +7,13 @@
 
   <script src="single.js"></script>
   <script src="lang.js"></script>
+  <link rel="stylesheet" href="single.css">
 
-  <button onclick="changeLanguage('en')">English</button>
-  <button onclick="changeLanguage('pl')">Polski</button>
-  <br> <!-- should be later removed -->
+  <div class="upper_bar">
+    <h class="title" data-i18n="title-single"> Singe mode</h>
+    <button class="language_button_en" onclick="changeLanguage('en')"> </button>
+    <button class="language_button_pl" onclick="changeLanguage('pl')"> </button>
+  </div>
 
   <body onload="changeLanguage(getPreferredLanguage())">
 
