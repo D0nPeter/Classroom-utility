@@ -1,5 +1,5 @@
-{
-    "single-title": "Single mode",
+window.translation ={
+    "title-single": "Single mode",
     "lowest-number": "Lowest number",
     "highest-number": "Highest number",
     "excluded-numbers": "Excluded numbers",

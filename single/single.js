@@ -1,57 +1,57 @@
-var min = 1;
-var max = 34;
+let min = 1;
+let max = 34;
 const MAX_MAX = 100;
 
 
-var number_pool = [];
-var is_excluded = new Array(max+1).fill(false);
+let numberPool = [];
+let isExcluded = new Array(max+1).fill(false);
 
 
-function set_values(){
-    min = parseInt(document.getElementById("lower_boundary").value);
-    max = parseInt(document.getElementById("upper_boundary").value);
+function setValues(){
+    min = parseInt(document.getElementById("lowest_number").value);
+    max = parseInt(document.getElementById("highest_number").value);
     max = Math.min(max, MAX_MAX);
 
 
-    is_excluded = new Array(max+1).fill(false);
-    var excluded_input = document.getElementById("excluded_numbers").value;
-    var excluded_list = excluded_input.split(",");
+    isExcluded = new Array(max+1).fill(false);
+    let excludedInput = document.getElementById("excluded_numbers").value;
+    let excludedList = excludedInput.split(",");
 
 
-    for(var i = 0; i < excluded_list.length; i++){
-        var num = parseInt(excluded_list[i].trim());
+    for(var i = 0; i < excludedList.length; i++){
+        let num = parseInt(excludedList[i].trim());
 
         if(!isNaN(num) && num >= min && num <= max){
-            is_excluded[num] = true;
+            isExcluded[num] = true;
         }
     }
 
-    fill_pool();
-    hide_range_form();
+    fillPool();
+    hideRangeForm();
 }
 
-function show_range_form(){
-    document.getElementById("select_range_form_parent").style.display = "block";
+function showRangeForm(){
+    document.getElementById("range_form_parent").style.display = "block";
 }
 
-function hide_range_form(){
-    document.getElementById("select_range_form_parent").style.display = "none";
+function hideRangeForm(){
+    document.getElementById("range_form_parent").style.display = "none";
 }
 
-function fill_pool(){
-    number_pool = [];
+function fillPool(){
+    numberPool = [];
 
-    for (var i = min; i <= max; i++) {
-        if(!is_excluded[i]){
-            number_pool.push(i);
+    for (let i = min; i <= max; i++) {
+        if(!isExcluded[i]){
+            numberPool.push(i);
         }
     }
 }
 
-function random_single() {
-    var position = Math.floor(Math.random() * number_pool.length);
-    var random_value = number_pool[position];
-    number_pool.splice(position, 1);
+function randomSingle() {
+    let position = Math.floor(Math.random() * numberPool.length);
+    let randomValue = numberPool[position];
+    numberPool.splice(position, 1);
 
-    document.getElementById("result_display").innerText = random_value;
+    document.getElementById("result_display").innerText = randomValue;
 }
