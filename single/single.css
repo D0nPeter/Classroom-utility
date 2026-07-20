@@ -49,6 +49,7 @@
 .main p {
     text-align: center;
     margin: 0 auto;
+    display: block;
 }
 
 .result_text {
@@ -57,17 +58,13 @@
 
 .result_display {
     font-size: 4rem;
+    height: 1.5em
 }
 
 .generate_button {
     font-size: 2rem;
-
     display: block;
     margin: 0% auto;
-}
-
-.main_buttons_parent {
-    
 }
 
 .modify_buttons_parent {
