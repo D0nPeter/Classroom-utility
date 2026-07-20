@@ -36,10 +36,19 @@
       <button onclick="setValues()" data-i18n="confirm"> Confirm </button>
     </div>
 
-    <button onclick="showRangeForm()" data-i18n="modify-values"> Modify values </button>
-    <button onclick="fillPool()" data-i18n="reset-values"> Reset values </button> <br> <br>
-    <button onclick="randomSingle()" data-i18n="generate"> Generate </button>
-    <p data-i18n="the-number-is"> The number is: </p>
-    <p id="result_display"> </p>
+    <div class="main">
+      <p data-i18n="the-number-is" class="result_text"> The number is: </p>
+      <p id="result_display" class="result_display"> </p>
+      
+
+      <div class="main_buttons_parent">
+        <button onclick="randomSingle()" data-i18n="generate" class="generate_button"> Generate </button>
+  
+        <div class="modify_buttons_parent">
+          <button onclick="showRangeForm()" data-i18n="modify-values"> Modify values </button>
+          <button onclick="fillPool()" data-i18n="reset-values"> Reset values </button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -41,3 +41,44 @@
     color: white;
     font-family: Arial, Verdana;
 }
+
+.main {
+    padding-top: 10%;
+}
+
+.main p {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.result_text {
+    font-size: 3rem;
+}
+
+.result_display {
+    font-size: 4rem;
+}
+
+.generate_button {
+    font-size: 2rem;
+
+    display: block;
+    margin: 0% auto;
+}
+
+.main_buttons_parent {
+    
+}
+
+.modify_buttons_parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modify_buttons_parent button {
+    font-size: 1.5rem;
+
+    display: block;
+    margin: 0.5%;
+}
