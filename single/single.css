@@ -18,12 +18,20 @@
     cursor: pointer;
 }
 
+.language_button_pl {
+    background-image: url('../image/icon/Flag_Poland.png');
+}
+
 .language_button_en {
     background-image: url('../image/icon/Flag_GreatBritain.png');
 }
 
-.language_button_pl {
-    background-image: url('../image/icon/Flag_Poland.png');
+.language_button_de {
+    background-image: url('../image/icon/Flag_Germany.png');
+}
+
+.language_button_la {
+    background-image: url('../image/icon/Flag_Rome.png');
 }
 
 .title {
