@@ -19,22 +19,24 @@
 
   <body onload="changeLanguage(getPreferredLanguage())">
 
-    <div class="range_form_parent" id="range_form_parent" style="display: none;"> 
-      <label for="lowest_number" data-i18n="lowest-number"> <b> Lowest number </b> </label>
-      <input type="number" placeholder="Enter number" data-i18n-placeholder="enter-number" id="lowest_number" required>
-      <br> <!-- should be later removed -->
+    <div class="range_form" id="range_form">
+      <div class="range_form_content"> 
+        <label for="lowest_number" data-i18n="lowest-number"> <b> Lowest number </b> </label>
+        <input type="number" placeholder="Enter number" data-i18n-placeholder="enter-number" id="lowest_number" required>
 
-      <label for="highest_number" data-i18n="highest-number"> <b> Highest number </b></label>
-      <input type="number" placeholder="Enter number" data-i18n-placeholder="enter-number" id="highest_number" required>
-      <br> <!-- should be later removed -->
+        <label for="highest_number" data-i18n="highest-number"> <b> Highest number </b></label>
+        <input type="number" placeholder="Enter number" data-i18n-placeholder="enter-number" id="highest_number" required>
 
-      <label for="excluded_numbers" data-i18n="excluded-numbers"> <b> Excluded numbers </b></label>
-      <input type="tel" placeholder="Enter numbers" data-i18n-placeholder="enter-numbers" id="excluded_numbers">
-      <br> <!-- should be later removed -->
-
-      <button onclick="hideRangeForm()" data-i18n="cancel"> Cancel </button>
-      <button onclick="setValues()" data-i18n="confirm"> Confirm </button>
+        <label for="excluded_numbers" data-i18n="excluded-numbers"> <b> Excluded numbers </b></label>
+        <input type="tel" placeholder="Enter numbers" data-i18n-placeholder="enter-numbers" id="excluded_numbers">
+        
+        <div class="range_form_button_parent">
+          <button onclick="hideRangeForm()" data-i18n="cancel"> Cancel </button>
+          <button onclick="setValues()" data-i18n="confirm"> Confirm </button>
+        </div>
+      </div>
     </div>
+    
 
     <div class="main">
       <p data-i18n="the-number-is" class="result_text"> The number is: </p>

@@ -31,11 +31,11 @@ function setValues(){
 }
 
 function showRangeForm(){
-    document.getElementById("range_form_parent").style.display = "block";
+    document.getElementById("range_form").style.display = "block";
 }
 
 function hideRangeForm(){
-    document.getElementById("range_form_parent").style.display = "none";
+    document.getElementById("range_form").style.display = "none";
 }
 
 function fillPool(){
