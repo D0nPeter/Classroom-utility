@@ -7,10 +7,11 @@
 
   <script src="single.js"></script>
   <script src="lang.js"></script>
+  <!-- wheel.js script at the end of DOM -->
   <link rel="stylesheet" href="single.css">
 
   <div class="upper_bar">
-    <h class="title" data-i18n="title-single"> Singe mode</h>
+    <h class="title" data-i18n="title-single"> Single mode</h>
     <button class="language_button_la" onclick="changeLanguage('la')"> </button>
     <button class="language_button_de" onclick="changeLanguage('de')"> </button>
     <button class="language_button_en" onclick="changeLanguage('en')"> </button>
@@ -37,6 +38,11 @@
       </div>
     </div>
     
+    <div>
+      <canvas id="wheel_canvas" data-i18n="canvas-not-supported" class="wheel_canvas" width="1000" height="1000" >
+        You browser does not support canvas
+      </canvas>
+    </div>
 
     <div class="main">
       <p data-i18n="the-number-is" class="result_text"> The number is: </p>
@@ -44,7 +50,7 @@
       
 
       <div class="main_buttons_parent">
-        <button onclick="randomSingle()" data-i18n="generate" class="generate_button"> Generate </button>
+        <button onclick="spinWheel()" data-i18n="generate" class="generate_button"> Generate </button>
   
         <div class="modify_buttons_parent">
           <button onclick="showRangeForm()" data-i18n="modify-values"> Modify values </button>
@@ -52,5 +58,7 @@
         </div>
       </div>
     </div>
+
+    <script src="wheel.js"></script>
   </body>
 </html>
