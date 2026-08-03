@@ -1,5 +1,11 @@
 let languageScript;
 
+window.addEventListener("load", init, true);
+
+function init(){
+    changeLanguage(getPreferredLanguage());
+}
+
 function getPreferredLanguage(){
     return localStorage.getItem("preferredLanguage") || 'en';
 }

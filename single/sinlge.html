@@ -5,9 +5,7 @@
     <title id="title"> Single mode </title>
   </head>
 
-  <script src="single.js"></script>
-  <script src="lang.js"></script>
-  <!-- wheel.js script at the end of DOM -->
+  <!-- Scripts at the end of DOM -->
   <link rel="stylesheet" href="single.css">
 
   <div class="upper_bar">
@@ -18,8 +16,7 @@
     <button class="language_button_pl" onclick="changeLanguage('pl')"> </button>
   </div>
 
-  <body onload="changeLanguage(getPreferredLanguage())">
-
+  <body>
     <div class="range_form" id="range_form">
       <div class="range_form_content"> 
         <label for="lowest_number" data-i18n="lowest-number"> <b> Lowest number </b> </label>
@@ -59,6 +56,8 @@
       </div>
     </div>
 
-    <script src="wheel.js"></script>
   </body>
+
+  <script src="single.js"></script>
+  <script src="lang.js"></script>
 </html>
