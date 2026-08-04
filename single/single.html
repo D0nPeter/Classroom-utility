@@ -36,26 +36,26 @@
       </div>
     </div>
     
-    <div>
-      <canvas id="wheel_canvas" data-i18n="canvas-not-supported" class="wheel_canvas" width="1000" height="1000" >
+    <div class="main">
+      <canvas id="wheel_canvas" data-i18n="canvas-not-supported" class="wheel_canvas" width="900" height="800" >
         You browser does not support canvas
       </canvas>
-    </div>
-
-    <div class="main">
-      <p data-i18n="the-number-is" class="result_text"> The number is: </p>
-      <p id="result_display" class="result_display"> </p>
-      
-
-      <div class="main_buttons_parent">
-        <button onclick="spinWheel()" data-i18n="generate" class="generate_button"> Generate </button>
+      <div class="menu">
+        <p data-i18n="the-number-is" class="result_text"> The number is: </p>
+        <p id="result_display" class="result_display"> </p>
+        
   
-        <div class="modify_buttons_parent">
-          <button onclick="showRangeForm()" data-i18n="modify-values"> Modify values </button>
-          <button onclick="fillPool()" data-i18n="reset-values"> Reset values </button>
+        <div class="menu_buttons_parent">
+          <button onclick="spinWheel()" data-i18n="generate" class="generate_button"> Generate </button>
+    
+          <div class="modify_buttons_parent">
+            <button onclick="showRangeForm()" data-i18n="modify-values"> Modify values </button>
+            <button onclick="fillPool()" data-i18n="reset-values"> Reset values </button>
+          </div>
         </div>
       </div>
     </div>
+
 
   </body>
 

@@ -16,9 +16,11 @@ const singleRotDuration = 360 / maxVel;
 //  Wheel display constants
 /// 
 const radius = 400;
-const textRadius = 300;
+const textRadius = 350;
 const width = canvas.width;
 const height = canvas.height;
+const selTriangleWidth = 30;
+const selTriangleHeight = 40;
 
 ///
 //  Wheel Variables
@@ -32,9 +34,10 @@ let rotation = 0;
 let sRotation = 0;
 
 /// 
-// Temporary colours
+// Colours
 ///
 const colours = ['#00420e', '#00aa00'];
+const selectionTriangleColour = '#ff2626'
 
 /// 
 // Number generation variables
@@ -226,5 +229,16 @@ function drawWheel(timestamp){
         drawText(i, numberPool[i]);
     }
 
+    drawSelectionTriangle();
+
     requestAnimationFrame(drawWheel);
+}
+
+function drawSelectionTriangle(){
+    ctx.beginPath();
+    ctx.moveTo(width/2  + radius + selTriangleWidth/2, height/2 + selTriangleHeight/2);
+    ctx.lineTo(width/2  + radius - selTriangleWidth/2, height/2);
+    ctx.lineTo(width/2  + radius + selTriangleWidth/2, height/2 - selTriangleHeight/2);
+    ctx.fillStyle = selectionTriangleColour;
+    ctx.fill();
 }
