@@ -10,5 +10,6 @@ window.translation = {
     "modify-values": "Bereich ändern",
     "reset-values": "Pool zurücksetzen",
     "generate": "Ziehen",
-    "the-number-is": "Die gezogene Nummer lautet: "
+    "the-number-is": "Die gezogene Nummer lautet: ",
+    "canvas-not-supported": "Ihr Browser unterstützt Canvas nicht."
 }

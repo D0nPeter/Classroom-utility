@@ -10,5 +10,6 @@ window.translation = {
     "modify-values": "Spatium mutare",
     "reset-values": "Numeros restitue",
     "generate": "Sortire",
-    "the-number-is": "Numerus qui extractus est: "
+    "the-number-is": "Numerus qui extractus est: ",
+    "canvas-not-supported": "Programma tuum navigandi Canvas non sustinet."
 }

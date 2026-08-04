@@ -10,5 +10,6 @@ window.translation = {
     "modify-values": "Modyfikuj zakres",
     "reset-values": "Resetuj pulę",
     "generate": "Losuj",
-    "the-number-is": "Wylosowany numer to: "
+    "the-number-is": "Wylosowany numer to: ",
+    "canvas-not-supported": "Twoja wyszukiwarka nie wspiera 'Canvas'."
 }
