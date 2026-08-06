@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50mm"
+   height="30mm"
+   viewBox="0 0 50 30"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="Flag_Rome.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="5.7513468"
+     inkscape:cx="106.7576"
+     inkscape:cy="47.727951"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1" />
+  <rect
+     style="fill:#ff0000;stroke-width:0.566001"
+     id="rect1"
+     width="50"
+     height="30"
+     x="0"
+     y="0"
+     inkscape:label="Background" />
+  <rect
+     style="fill:#ffcc00;stroke-width:0.270952"
+     id="rect2"
+     width="40"
+     height="2"
+     x="5"
+     y="23"
+     inkscape:label="Bar" />
+  <text
+     xml:space="preserve"
+     style="font-size:17.5533px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffcc00;stroke-width:0.2633"
+     x="1.9491099"
+     y="19.158062"
+     id="text2"
+     inkscape:label="Text"
+     transform="scale(1.0222273,0.97825601)"><tspan
+       sodipodi:role="line"
+       id="tspan2"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5533px;font-family:Alef;-inkscape-font-specification:Alef;stroke-width:0.2633"
+       x="1.9491099"
+       y="19.158062">SPQR</tspan></text>
+</svg>

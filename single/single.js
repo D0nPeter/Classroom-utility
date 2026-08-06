@@ -15,12 +15,30 @@ const singleRotDuration = 360 / maxVel;
 ///
 //  Wheel display constants
 /// 
-const radius = 400;
-const textRadius = 350;
-const width = canvas.width;
-const height = canvas.height;
-const selTriangleWidth = 30;
-const selTriangleHeight = 40;
+const widthPercentage = 0.5;
+const heightPercentage = 0.85;
+
+const baseWidth = 900;
+const baseHeight = 800;
+const baseRadius = 400;
+const baseTextRadius = 350;
+const baseSelTriangleWidth = 30;
+const baseSelTriangleHeight = 40;
+const baseFontSize = 60;
+
+const baseTextOffset = 20;
+
+///
+//  Wheel display variables
+/// 
+let scalingPercentage = 1;
+let width = baseWidth;
+let height = baseHeight;
+let radius = baseRadius;
+let textRadius = baseTextRadius;
+let selTriangleWidth = baseSelTriangleWidth;
+let selTriangleHeight = baseSelTriangleHeight;
+let fontSize = baseFontSize;
 
 ///
 //  Wheel Variables
@@ -53,6 +71,8 @@ let numberPool = [];
 let isExcluded = new Array(max+1).fill(false);
 
 window.addEventListener("load", init, true);
+window.addEventListener("resize", resizeCanvas, false);
+
 function init(){
     fillPool();
     requestAnimationFrame(drawWheel);
@@ -129,6 +149,26 @@ function displayResult(){
 //  WHEEL DRAWING
 /// 
 
+function resizeCanvas(){
+    let wPer = window.innerWidth * widthPercentage / baseWidth;
+    let hPer = window.innerHeight * heightPercentage / baseHeight;
+
+    scalingPercentage = Math.min(wPer, hPer);
+
+    // Updating variables
+    width = baseWidth * scalingPercentage;
+    height = baseHeight * scalingPercentage;
+    radius = baseRadius * scalingPercentage;
+    textRadius = baseTextRadius * scalingPercentage;
+    selTriangleWidth = baseSelTriangleWidth * scalingPercentage;
+    selTriangleHeight = baseSelTriangleHeight * scalingPercentage;
+    fontSize = baseFontSize * scalingPercentage;
+
+    // Updating canvas
+    canvas.width = width;
+    canvas.height = height;
+}
+
 function drawWheelPart(number, colour){
     // Rotation is converted into radians for use in trigonometric functions.
     let sAng = 2*Math.PI * number/numberPool.length + rotation * Math.PI / 180;
@@ -162,10 +202,10 @@ function drawText(number, val){
     //  - CHange font size based on number of parts.
     /// </todo>
 
-    ctx.font = "60px Arial";
+    ctx.font = `${fontSize}px Arial`;
     ctx.fillStyle = "#FFFFFF";
     ctx.textAlign = "center";
-    ctx.fillText(val, textRadius, 20);
+    ctx.fillText(val, textRadius, baseTextOffset * scalingPercentage);
 
     ctx.restore();
 }
