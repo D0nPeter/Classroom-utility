@@ -54,7 +54,7 @@ let sRotation = 0;
 /// 
 // Colours
 ///
-const colours = ['#00420e', '#00aa00'];
+const colours = ['#00420e', '#00aa00', '#008800'];
 const selectionTriangleColour = '#ff2626'
 
 /// 
@@ -274,7 +274,11 @@ function calculateRotation(timestamp){
 // - Improve function for wheels with odd number of parts.
 // </todo>
 function getPartColour(number){
-    return colours[number%2];
+    if(numberPool.length%3 != 1 || number != numberPool.length-1){
+        return colours[number%3];
+    }
+
+    return colours[1];
 }
 
 function drawWheel(timestamp){
