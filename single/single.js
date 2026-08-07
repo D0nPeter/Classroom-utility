@@ -67,6 +67,7 @@ let max = 34;
 /// 
 // References and other variables
 /// 
+let positionToRemove = -1;
 let numberPool = [];
 let isExcluded = new Array(max+1).fill(false);
 
@@ -131,17 +132,33 @@ function shuffle(arr){
 
 function spinWheel(){
     stage = 1;
+    
+    positionToRemove = -1;
+    document.getElementById("remove_button").style.display = "none";
+
+    document.getElementById("result_display").innerText = "";
 
     rotTime = (Math.floor(Math.random() * numberPool.length) + 0.5) / numberPool.length * singleRotDuration + baseRotTime;
     midRot = (rotTime * maxVel) % 360;
 }
 
+function removeLastNumber(){
+    if(positionToRemove == -1){
+        return;
+    }
+
+    numberPool.splice(positionToRemove, 1);
+    
+    positionToRemove = -1;
+    document.getElementById("remove_button").style.display = "none";
+}
+
 function displayResult(){
     let angPerNumber = 360 / numberPool.length;
-    let position = numberPool.length - Math.ceil(rotation / angPerNumber);
-    let number = numberPool[position];
-    //numberPool.splice(position, 1);
+    positionToRemove = numberPool.length - Math.ceil(rotation / angPerNumber);
+    let number = numberPool[positionToRemove];
 
+    document.getElementById("remove_button").style.display = "block";
     document.getElementById("result_display").innerText = number;
 }
 

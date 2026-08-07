@@ -11,5 +11,6 @@ window.translation = {
     "reset-values": "Reset values",
     "generate": "Generate",
     "the-number-is": "The number is: ",
-    "canvas-not-supported": "Your browser does not support canvas."
+    "canvas-not-supported": "Your browser does not support canvas.",
+    "remove-number": "Remove the number"
 }

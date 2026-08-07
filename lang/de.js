@@ -11,5 +11,6 @@ window.translation = {
     "reset-values": "Pool zurücksetzen",
     "generate": "Ziehen",
     "the-number-is": "Die gezogene Nummer lautet: ",
-    "canvas-not-supported": "Ihr Browser unterstützt Canvas nicht."
+    "canvas-not-supported": "Ihr Browser unterstützt Canvas nicht.",
+    "remove-number": "Die Nummer entfernen"
 }

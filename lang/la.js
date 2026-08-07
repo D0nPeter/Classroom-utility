@@ -11,5 +11,6 @@ window.translation = {
     "reset-values": "Numeros restitue",
     "generate": "Sortire",
     "the-number-is": "Numerus qui extractus est: ",
-    "canvas-not-supported": "Programma tuum navigandi Canvas non sustinet."
+    "canvas-not-supported": "Programma tuum navigandi Canvas non sustinet.",
+    "remove-number": "Numerum amovere"
 }

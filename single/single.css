@@ -78,7 +78,13 @@ body {
 .generate_button {
     font-size: 2rem;
     display: block;
-    margin: 0% auto;
+    margin: 2% auto;
+}
+
+.remove_button {
+    font-size: 2rem;
+    display: none;
+    margin: 2% auto;
 }
 
 .modify_buttons_parent {
