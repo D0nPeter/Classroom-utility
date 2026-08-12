@@ -216,7 +216,6 @@ function drawText(number, val){
 
     /// <todo>
     /// - Add ability to apply style from css sheets.
-    //  - CHange font size based on number of parts.
     /// </todo>
 
     ctx.font = `${fontSize}px Arial`;
@@ -269,10 +268,6 @@ function calculateRotation(timestamp){
     }
 }
 
-
-/// <todo> 
-// - Improve function for wheels with odd number of parts.
-// </todo>
 function getPartColour(number){
     if(numberPool.length%3 != 1 || number != numberPool.length-1){
         return colours[number%3];
