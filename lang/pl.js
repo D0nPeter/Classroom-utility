@@ -12,5 +12,8 @@ window.translation = {
     "generate": "Losuj",
     "the-number-is": "Wylosowany numer to: ",
     "canvas-not-supported": "Twoja wyszukiwarka nie wspiera 'Canvas'.",
-    "remove-number": "Usuń numerek ze zbioru"
+    "remove-number": "Usuń numerek ze zbioru",
+    
+    "main-page": "Strona główna",
+    "single-mode": "Jeden numerek"
 }

@@ -12,5 +12,8 @@ window.translation = {
     "generate": "Generate",
     "the-number-is": "The number is: ",
     "canvas-not-supported": "Your browser does not support canvas.",
-    "remove-number": "Remove the number"
+    "remove-number": "Remove the number",
+
+    "main-page": "Main Page",
+    "single-mode": "Single Mode"
 }

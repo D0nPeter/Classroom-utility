@@ -12,5 +12,8 @@ window.translation = {
     "generate": "Sortire",
     "the-number-is": "Numerus qui extractus est: ",
     "canvas-not-supported": "Programma tuum navigandi Canvas non sustinet.",
-    "remove-number": "Numerum amovere"
+    "remove-number": "Numerum amovere",
+
+    "main-page": "Pagina Domestica",
+    "single-mode": "Unus Numerus"
 }

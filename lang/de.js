@@ -12,5 +12,8 @@ window.translation = {
     "generate": "Ziehen",
     "the-number-is": "Die gezogene Nummer lautet: ",
     "canvas-not-supported": "Ihr Browser unterstützt Canvas nicht.",
-    "remove-number": "Die Nummer entfernen"
+    "remove-number": "Die Nummer entfernen",
+
+    "main-page": "Startseite",
+    "single-mode": "Einzelnummer"
 }

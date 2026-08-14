@@ -94,7 +94,7 @@ function switchSidenavVisibility(){
 }
 
 function openSidenav() {
-    document.getElementById("sidenav").style.width = "12%";
+    document.getElementById("sidenav").style.width = "14%";
     document.getElementById("sidenav_button").style.backgroundImage = "url('../image/icon/ArrowLeft_froggy.svg')";
 }
 
