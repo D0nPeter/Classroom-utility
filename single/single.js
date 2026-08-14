@@ -21,12 +21,15 @@ const heightPercentage = 0.85;
 const baseWidth = 900;
 const baseHeight = 800;
 const baseRadius = 400;
-const baseTextRadius = 350;
+const baseTextRadius = 330;
 const baseSelTriangleWidth = 30;
 const baseSelTriangleHeight = 40;
-const baseFontSize = 60;
+const baseFontSize = 100;
 
-const baseTextOffset = 20;
+const baseTextOffset = 40;
+
+// If the pool size is bigger than this number text is scaled down.
+const textScalingPoolSizeBorder = 12;
 
 ///
 //  Wheel display variables
@@ -65,8 +68,9 @@ let min = 1;
 let max = 34;
 
 /// 
-// References and other variables
+// Other variables
 /// 
+let isSidenavVisible = false;
 let positionToRemove = -1;
 let numberPool = [];
 let isExcluded = new Array(max+1).fill(false);
@@ -79,9 +83,30 @@ function init(){
     requestAnimationFrame(drawWheel);
 }
 
+function switchSidenavVisibility(){
+    if(isSidenavVisible){
+        closeSidenav();
+    }else{
+        openSidenav();
+    }
+
+    isSidenavVisible = !isSidenavVisible;
+}
+
+function openSidenav() {
+    document.getElementById("sidenav").style.width = "12%";
+    document.getElementById("sidenav_button").style.backgroundImage = "url('../image/icon/ArrowLeft_froggy.svg')";
+}
+
+function closeSidenav() {
+    document.getElementById("sidenav").style.width = "0";
+    document.getElementById("sidenav_button").style.backgroundImage = "url('../image/icon/ArrowRight_froggy.svg')";
+}
+
 function setValues(){
     min = parseInt(document.getElementById("lowest_number").value);
     max = parseInt(document.getElementById("highest_number").value);
+    min = Math.max(min, 1);
     max = Math.min(max, MAX_MAX);
 
     isExcluded = new Array(max+1).fill(false);
@@ -102,10 +127,26 @@ function setValues(){
 
 function showRangeForm(){
     document.getElementById("range_form").style.display = "block";
+
+    updateRangeFormInputs();
 }
 
 function hideRangeForm(){
     document.getElementById("range_form").style.display = "none";
+}
+
+function updateRangeFormInputs(){
+    document.getElementById("lowest_number").value = min;
+    document.getElementById("highest_number").value = max;
+
+    let excluded_string = "";
+    for(let i = 0; i < isExcluded.length; i++){
+        if(isExcluded[i]){
+            excluded_string += `${i}, `;
+        }
+    }
+
+    document.getElementById("excluded_numbers").value = excluded_string.substring(0, excluded_string.length - 2);
 }
 
 function fillPool(){
@@ -147,6 +188,7 @@ function removeLastNumber(){
         return;
     }
 
+    isExcluded[numberPool[positionToRemove]] = true;
     numberPool.splice(positionToRemove, 1);
     
     positionToRemove = -1;
@@ -218,10 +260,21 @@ function drawText(number, val){
     /// - Add ability to apply style from css sheets.
     /// </todo>
 
-    ctx.font = `${fontSize}px Arial`;
+    let displayFont = fontSize;
+    let textRadiusOffset = 0;
+    let textVertOffset = baseTextOffset * scalingPercentage;
+
+    if(numberPool.length > textScalingPoolSizeBorder){
+        let poolSizeFactor = textScalingPoolSizeBorder / (numberPool.length);
+        displayFont = fontSize * poolSizeFactor
+        textRadiusOffset = (fontSize - displayFont) / 2;
+        textVertOffset *= poolSizeFactor;
+    }
+
+    ctx.font = `${displayFont}px Arial`;
     ctx.fillStyle = "#FFFFFF";
     ctx.textAlign = "center";
-    ctx.fillText(val, textRadius, baseTextOffset * scalingPercentage);
+    ctx.fillText(val, textRadius + textRadiusOffset, textVertOffset);
 
     ctx.restore();
 }

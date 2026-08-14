@@ -21,6 +21,15 @@ body {
     cursor: pointer;
 }
 
+.title {
+    font-size: 350%;
+    margin: .5rem;
+
+    display: inline-block;
+    color: white;
+    font-family: Arial, Verdana;
+}
+
 .language_button_pl {
     background-image: url('../image/icon/Flag_Poland.svg');
 }
@@ -37,13 +46,56 @@ body {
     background-image: url('../image/icon/Flag_Rome.svg');
 }
 
-.title {
-    font-size: 350%;
-    margin: .5rem;
+.sidenav {
+    display: block;
+    position: fixed;
 
-    display: inline-block;
+    z-index: 1;
+    height: 100%;
+    width: 0;
+    background-color: green;
+
+    transition: 0.5s;
+
+    padding-top: 1%;
+}
+
+.sidenav button {
+    position: absolute;
+
+    top: 0%;
+    left: 100%;
+
+    width: 2rem;
+    height: 2rem;
+
+    cursor: pointer;
+
+    border: none;
+    background: none;
+    background-size: cover;
+    background-image: url('../image/icon/ArrowRight_froggy.svg');
+}
+
+.sidenav a {
+    font-size: 2rem;
+    display: block;
+
+    padding: 1rem 0 1rem 1rem;
+
     color: white;
-    font-family: Arial, Verdana;
+    font-weight: normal;
+    text-decoration: none;
+
+    transition: 0.3s;
+    white-space: nowrap;
+
+    overflow-x: hidden;
+}
+
+.sidenav a:hover {
+    font-weight: bold;
+    text-decoration: wavy;
 }
 
 .wheel_canvas {

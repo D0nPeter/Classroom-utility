@@ -9,15 +9,22 @@
   <!-- Scripts at the end of DOM -->
   <link rel="stylesheet" href="single.css">
 
-  <div class="upper_bar">
-    <h class="title" data-i18n="title-single"> Single mode</h>
-    <button class="language_button_la" onclick="changeLanguage('la')"> </button>
-    <button class="language_button_de" onclick="changeLanguage('de')"> </button>
-    <button class="language_button_en" onclick="changeLanguage('en')"> </button>
-    <button class="language_button_pl" onclick="changeLanguage('pl')"> </button>
-  </div>
-
+  
   <body>
+    <div class="upper_bar">
+      <h class="title" data-i18n="title-single"> Single mode</h>
+      <button class="language_button_la" onclick="changeLanguage('la')"> </button>
+      <button class="language_button_de" onclick="changeLanguage('de')"> </button>
+      <button class="language_button_en" onclick="changeLanguage('en')"> </button>
+      <button class="language_button_pl" onclick="changeLanguage('pl')"> </button>
+    </div>
+
+    <div id="sidenav" class="sidenav">
+      <button id="sidenav_button" onclick="switchSidenavVisibility()" > </button>
+      <a href="../index.html"> Main Page </a>
+      <a href="javascript:void(0)"> Single Mode </a>
+    </div>
+
     <div class="range_form" id="range_form">
       <div class="range_form_content"> 
         <label for="lowest_number" data-i18n="lowest-number"> <b> Lowest number </b> </label>

@@ -22,11 +22,10 @@ In the near future my main goal is to finish the single mode of the website. Thi
 - [ ] Add *css* styling to buttons and text on the left,
 - [ ] Add themes and the ability to change them,
 - [ ] Make the wheel respond to themes,
-- [ ] Allow cancel and confirm buttons in the modify pool to influence input fields,
+- [X] Allow cancel and confirm buttons in the modify pool to influence input fields,
 - [ ] Make the website scale better when resizing,
-- [ ] Add navigation bar that would allow navigating the website,
-- [ ] Fix errors that may arise from using negative numbers,
-- [ ] Change the upper limit of the pool,
+- [X] Add navigation bar that would allow navigating the website,
+- [X] Fix errors that may arise from using negative numbers,
 - [ ] Removing number from the number pool for a certain number of spins.
 
 Next, further goals include:
