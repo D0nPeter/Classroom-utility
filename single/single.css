@@ -77,7 +77,11 @@ body {
     background-image: url('../image/icon/ArrowRight_froggy.svg');
 }
 
-.sidenav a {
+.sidenav_links {
+    overflow-x: hidden;
+}
+
+.sidenav_links a {
     font-size: 2rem;
     display: block;
 
@@ -89,8 +93,6 @@ body {
 
     transition: 0.3s;
     white-space: nowrap;
-
-    overflow-x: hidden;
 }
 
 .sidenav a:hover {
