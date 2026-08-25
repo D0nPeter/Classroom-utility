@@ -6,12 +6,14 @@
     <!-- Add favicon for webpage! -->
   </head>
 
-  <!-- Scripts at the end of DOM -->
+  <script src="lang.js"></script>
+  <script src="style.js"></script>
+  <!-- Single.js script at the end of DOM -->
   <link rel="stylesheet" href="single.css">
-
+  <link rel="stylesheet" href="../themes/froggy.css" id="theme_link">
   
   <body>
-    <div class="upper_bar">
+    <div class="upper_navbar">
       <h class="title" data-i18n="title-single"> Single mode</h>
       <button class="language_button_la" onclick="changeLanguage('la')"> </button>
       <button class="language_button_de" onclick="changeLanguage('de')"> </button>
@@ -20,11 +22,18 @@
     </div>
 
     <div id="sidenav" class="sidenav">
-      <button id="sidenav_button" onclick="switchSidenavVisibility()" > </button>
+      <button id="sidenav_button" class="sidenav_button" onclick="switchSidenavVisibility()" > </button>
 
-      <div class="sidenav_links">
+      <div class="sidenav_navigation">
+        <h data-i18n="navigation"> NAVIGATION </h>
         <a href="../index.html" data-i18n="main-page"> Main Page </a>
         <a href="javascript:void(0)" data-i18n="single-mode"> Single Mode </a>
+      </div>
+
+      <div class="sidenav_themes">
+        <h data-i18n="themes"> THEMES </h>
+        <button id="theme-froggy" onclick="changeTheme('froggy')" data-i18n="theme-froggy"> Froggy </button>
+        <button id="theme-space" onclick="changeTheme('space')" data-i18n="theme-space"> Space </button>
       </div>
     </div>
 
@@ -71,5 +80,5 @@
   </body>
 
   <script src="single.js"></script>
-  <script src="lang.js"></script>
+  
 </html>

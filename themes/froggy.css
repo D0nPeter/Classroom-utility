@@ -1,0 +1,42 @@
+.upper_navbar {
+    background-color: darkgreen;
+}
+
+.title {
+    color: white;
+    font-family: Arial, Verdana;
+}
+
+.sidenav {
+    background-color: green;
+}
+
+.sidenav_button {
+    background-image: url('../image/icon/ArrowRight_froggy.svg');
+}
+
+.sidenav_navigation h {
+    color: white;
+}
+
+.sidenav_navigation a {
+    color: white;
+}
+
+.sidenav_themes h {
+    color: white;
+}
+
+.sidenav_themes button {
+    color: white;
+}
+
+
+.range_form {
+    background-color: #00000088;
+}
+
+.range_form_content {
+    background-color: white;
+    border: 5px solid black;
+}
