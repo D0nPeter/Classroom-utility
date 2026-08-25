@@ -1,8 +1,10 @@
+window.languageChangedEvent = new Event("languageChanged");
+
 let languageScript;
 
-window.addEventListener("load", init, true);
+window.addEventListener("load", initLang, true);
 
-function init(){
+function initLang(){
     changeLanguage(getPreferredLanguage());
 }
 
@@ -14,6 +16,8 @@ function changeLanguage(lang){
     localStorage.setItem("preferredLanguage", lang);
 
     loadLanguageScript(lang);
+
+    dispatchEvent( window.languageChangedEvent );
 }
 
 function applyTranslation(translation){

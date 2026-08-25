@@ -14,6 +14,11 @@ window.translation = {
     "canvas-not-supported": "Programma tuum navigandi Canvas non sustinet.",
     "remove-number": "Numerum amovere",
 
+    "navigation": "NAVIGATIO",
     "main-page": "Pagina Domestica",
-    "single-mode": "Unus Numerus"
+    "single-mode": "Unus Numerus",
+
+    "themes": "FORMA PAGINAE",
+    "theme-froggy": "Ranae",
+    "theme-space": "Cosmos",
 }

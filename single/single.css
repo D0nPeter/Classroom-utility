@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    transition: background-color 1s;
 }
 
 .upper_navbar {
@@ -110,9 +111,8 @@ body {
 }
 
 .sidenav_themes {
+    padding-top: 200%;
     overflow-x: hidden;
-    position: fixed;
-    bottom: 10%;
 }
 
 .sidenav_themes h {

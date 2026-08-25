@@ -14,10 +14,11 @@ window.translation = {
     "canvas-not-supported": "Ihr Browser unterstützt Canvas nicht.",
     "remove-number": "Die Nummer entfernen",
 
-    "navigation": "",
+    "navigation": "NAVIGATION",
     "main-page": "Startseite",
     "single-mode": "Einzelnummer",
 
-    "themes": "",
-    "theme-froggy": ""
+    "themes": "SEITENSTIL",
+    "theme-froggy": "Frösche",
+    "theme-space": "Kosmos",
 }

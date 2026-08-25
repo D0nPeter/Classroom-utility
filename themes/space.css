@@ -1,3 +1,7 @@
+body {
+    background-color: #797db9;
+}
+
 .upper_navbar {
     background-color: rgb(2, 0, 148);
 }
@@ -12,7 +16,7 @@
 }
 
 .sidenav_button {
-    background-image: url('../image/icon/ArrowRight_froggy.svg');
+    background-image: url('../image/icon/ArrowRight_space.svg');
 }
 
 .sidenav_navigation h {

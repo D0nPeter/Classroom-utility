@@ -14,6 +14,12 @@ window.translation = {
     "canvas-not-supported": "Twoja wyszukiwarka nie wspiera 'Canvas'.",
     "remove-number": "Usuń numerek ze zbioru",
     
+    
+    "navigation": "NAWIGACJA",
     "main-page": "Strona główna",
-    "single-mode": "Jeden numerek"
+    "single-mode": "Jeden numerek",
+
+    "themes": "STYLE",
+    "theme-froggy": "Żabkowy",
+    "theme-space": "Kosmiczny",
 }

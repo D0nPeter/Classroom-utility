@@ -20,7 +20,7 @@ Those websites are updated from time to time, yet the newest version of the proj
 ## Plans for future 📈
 In the near future my main goal is to finish the single mode of the website. This task requires following upgrades and features to be in place:
 - [ ] Add *css* styling to buttons and text on the left,
-- [ ] Add themes and the ability to change them,
+- [X] Add themes and the ability to change them,
 - [ ] Make the wheel respond to themes,
 - [X] Allow cancel and confirm buttons in the modify pool to influence input fields,
 - [ ] Make the website scale better when resizing,
@@ -28,8 +28,10 @@ In the near future my main goal is to finish the single mode of the website. Thi
 - [X] Fix errors that may arise from using negative numbers,
 - [ ] Removing number from the number pool for a certain number of spins.
 
+<sup> Crossed out tasks are already completed. </sup>
+
 Next, further goals include:
-- Mode that would allow to add strings to the wheel,
+- Mode that would allow to add text to the wheel,
 - Mode that would allow to group numbers ( or strings ) into pairs.
 
 ## Themes 🐸

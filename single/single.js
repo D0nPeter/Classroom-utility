@@ -75,12 +75,17 @@ let positionToRemove = -1;
 let numberPool = [];
 let isExcluded = new Array(max+1).fill(false);
 
-window.addEventListener("load", init, true);
+window.addEventListener("load", initSingle, false);
 window.addEventListener("resize", resizeCanvas, false);
+window.addEventListener("themeChanged", themeChanged, false)
 
-function init(){
+function initSingle(){
     fillPool();
     requestAnimationFrame(drawWheel);
+}
+
+function themeChanged(){
+    updateSidenavButton();
 }
 
 function switchSidenavVisibility(){
@@ -89,18 +94,23 @@ function switchSidenavVisibility(){
     }else{
         openSidenav();
     }
-
+    
     isSidenavVisible = !isSidenavVisible;
+    updateSidenavButton();
+}
+
+function updateSidenavButton(){
+    let dir = isSidenavVisible ? "Left" : "Right";
+    let url = "../image/icon/Arrow" + dir + "_" + window.currentTheme + ".svg"; 
+    document.getElementById("sidenav_button").style.backgroundImage = `url('${url}')`;
 }
 
 function openSidenav() {
     document.getElementById("sidenav").style.width = "14%";
-    document.getElementById("sidenav_button").style.backgroundImage = "url('../image/icon/ArrowLeft_froggy.svg')";
 }
 
 function closeSidenav() {
     document.getElementById("sidenav").style.width = "0";
-    document.getElementById("sidenav_button").style.backgroundImage = "url('../image/icon/ArrowRight_froggy.svg')";
 }
 
 function setValues(){
