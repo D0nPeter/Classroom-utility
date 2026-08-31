@@ -28,7 +28,7 @@ In the near future my main goal is to finish the single mode of the website. Thi
 - [X] Fix errors that may arise from using negative numbers,
 - [ ] Removing number from the number pool for a certain number of spins.
 
-<sup> Crossed out tasks are already completed. </sup>
+<sup> Checked tasks are already completed. </sup>
 
 Next, further goals include:
 - Mode that would allow to add text to the wheel,
