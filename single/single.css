@@ -31,19 +31,19 @@ body {
 }
 
 .language_button_pl {
-    background-image: url('../image/icon/Flag_Poland.svg');
+    background-image: url('../image/flags/Flag_Poland.svg');
 }
 
 .language_button_en {
-    background-image: url('../image/icon/Flag_GreatBritain.svg');
+    background-image: url('../image/flags/Flag_GreatBritain.svg');
 }
 
 .language_button_de {
-    background-image: url('../image/icon/Flag_Germany.svg');
+    background-image: url('../image/flags/Flag_Germany.svg');
 }
 
 .language_button_la {
-    background-image: url('../image/icon/Flag_Rome.svg');
+    background-image: url('../image/flags/Flag_Rome.svg');
 }
 
 .sidenav {

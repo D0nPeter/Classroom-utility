@@ -101,7 +101,7 @@ function switchSidenavVisibility(){
 
 function updateSidenavButton(){
     let dir = isSidenavVisible ? "Left" : "Right";
-    let url = "../image/icon/Arrow" + dir + "_" + window.currentTheme + ".svg"; 
+    let url = "../image/buttons/Arrow" + dir + "_" + window.currentTheme + ".svg"; 
     document.getElementById("sidenav_button").style.backgroundImage = `url('${url}')`;
 }
 

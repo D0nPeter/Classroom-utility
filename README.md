@@ -13,13 +13,13 @@ Single mode of the website now utilizes a fortune wheel to generate numbers in a
 
 ## Working website 🌐
 For those that do not want or know how to download this project from github you can check it out on my website.  
-If you want to check out single mode go [here](https://classroom-utility.qbitx.io/single/single.html).  
+If you want to check out single mode go [here](https://classroom-utility.qbitx.io/single/).  
 If for some reason you want to visit main page of the website ( which is unfinished at the moment ) go [here](https://classroom-utility.qbitx.io/).  
 Those websites are updated from time to time, yet the newest version of the project is always available on [github](https://github.com/D0nPeter/Classroom-utility/). 
 
 ## Plans for future 📈
 In the near future my main goal is to finish the single mode of the website. This task requires following upgrades and features to be in place:
-- [ ] Add *css* styling to buttons and text on the left,
+- [ ] Add *css* styling to buttons and text on the right,
 - [X] Add themes and the ability to change them,
 - [ ] Make the wheel respond to themes,
 - [X] Allow cancel and confirm buttons in the modify pool to influence input fields,
