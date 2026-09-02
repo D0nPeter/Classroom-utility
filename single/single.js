@@ -55,10 +55,9 @@ let rotation = 0;
 let sRotation = 0;
 
 /// 
-// Colours
+// colors
 ///
-const colours = ['#00420e', '#00aa00', '#008800'];
-const selectionTriangleColour = '#ff2626'
+const selectionTrianglecolor = '#ff2626'
 
 /// 
 // Number generation variables
@@ -70,14 +69,13 @@ let max = 34;
 /// 
 // Other variables
 /// 
-let isSidenavVisible = false;
 let positionToRemove = -1;
 let numberPool = [];
 let isExcluded = new Array(max+1).fill(false);
 
 window.addEventListener("load", initSingle, false);
 window.addEventListener("resize", resizeCanvas, false);
-window.addEventListener("themeChanged", themeChanged, false)
+window.addEventListener("themeChanged", themeChanged, false);
 
 function initSingle(){
     fillPool();
@@ -85,32 +83,27 @@ function initSingle(){
 }
 
 function themeChanged(){
-    updateSidenavButton();
-}
+    let theme_buttons = document.querySelectorAll("[id^=theme_]");
 
-function switchSidenavVisibility(){
-    if(isSidenavVisible){
-        closeSidenav();
-    }else{
-        openSidenav();
-    }
-    
-    isSidenavVisible = !isSidenavVisible;
-    updateSidenavButton();
-}
+    theme_buttons.forEach(button => {
+        button.style.fontWeight = "unset";
+    });
 
-function updateSidenavButton(){
-    let dir = isSidenavVisible ? "Left" : "Right";
-    let url = "../image/buttons/Arrow" + dir + "_" + window.currentTheme + ".svg"; 
-    document.getElementById("sidenav_button").style.backgroundImage = `url('${url}')`;
+    document.getElementById("theme_" + window.currentTheme).style.fontWeight = "bold";
 }
 
 function openSidenav() {
     document.getElementById("sidenav").style.width = "14%";
+
+    document.getElementById("sidenav_button_right").style.display = "none";
+    document.getElementById("sidenav_button_left").style.display = "block";
 }
 
 function closeSidenav() {
     document.getElementById("sidenav").style.width = "0";
+
+    document.getElementById("sidenav_button_right").style.display = "block";
+    document.getElementById("sidenav_button_left").style.display = "none";
 }
 
 function setValues(){
@@ -238,7 +231,7 @@ function resizeCanvas(){
     canvas.height = height;
 }
 
-function drawWheelPart(number, colour){
+function drawWheelPart(number, color){
     // Rotation is converted into radians for use in trigonometric functions.
     let sAng = 2*Math.PI * number/numberPool.length + rotation * Math.PI / 180;
     let eAng = 2*Math.PI * (number+1)/numberPool.length + rotation * Math.PI / 180;
@@ -249,7 +242,7 @@ function drawWheelPart(number, colour){
     let sY = height/2 + Math.sin(sAng)*radius;
     let eY = height/2 + Math.sin(eAng)*radius;
 
-    ctx.fillStyle = colour;
+    ctx.fillStyle = color;
 
     ctx.beginPath();
     ctx.moveTo(sX, sY);
@@ -331,12 +324,23 @@ function calculateRotation(timestamp){
     }
 }
 
-function getPartColour(number){
+function getColor(element){
+    let style = window.getComputedStyle(document.getElementById(element));
+    return style.getPropertyValue('color');
+}
+
+function getPartcolor(number){
+    let wheelcolors = ['#000000', '#888888', '#FFFFFF'];
+
+    wheelcolors[0] = getColor("wheel_color_1");
+    wheelcolors[1] = getColor("wheel_color_2");
+    wheelcolors[2] = getColor("wheel_color_3");
+
     if(numberPool.length%3 != 1 || number != numberPool.length-1){
-        return colours[number%3];
+        return wheelcolors[number%3];
     }
 
-    return colours[1];
+    return wheelcolors[1];
 }
 
 function drawWheel(timestamp){
@@ -344,7 +348,7 @@ function drawWheel(timestamp){
 
     ctx.clearRect(0, 0, width, height);
     for(let i=0; i<numberPool.length; i++){
-        drawWheelPart(i, getPartColour(i));
+        drawWheelPart(i, getPartcolor(i));
         drawText(i, numberPool[i]);
     }
 
@@ -358,6 +362,6 @@ function drawSelectionTriangle(){
     ctx.moveTo(width/2  + radius + selTriangleWidth/2, height/2 + selTriangleHeight/2);
     ctx.lineTo(width/2  + radius - selTriangleWidth/2, height/2);
     ctx.lineTo(width/2  + radius + selTriangleWidth/2, height/2 - selTriangleHeight/2);
-    ctx.fillStyle = selectionTriangleColour;
+    ctx.fillStyle = selectionTrianglecolor;
     ctx.fill();
 }

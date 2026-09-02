@@ -15,8 +15,12 @@ body {
     background-color: green;
 }
 
-.sidenav_button {
-    background-image: url('../image/icon/ArrowRight_froggy.svg');
+.sidenav_button_left {
+    background-image: url('../image/buttons/ArrowLeft_froggy.svg');
+}
+
+.sidenav_button_right {
+    background-image: url('../image/buttons/ArrowRight_froggy.svg');
 }
 
 .sidenav_navigation h {
@@ -43,4 +47,16 @@ body {
 .range_form_content {
     background-color: white;
     border: 5px solid black;
+}
+
+.wheel_color_1 {
+    color: #00420e;
+}
+
+.wheel_color_2 {
+    color: #00aa00
+}
+
+.wheel_color_3 {
+    color: #008800;
 }

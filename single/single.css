@@ -52,28 +52,38 @@ body {
 
     z-index: 1;
     height: 100%;
-    width: 0;
+    width: 0%;
 
     transition: width 0.5s, background-color 1s;
 
     padding-top: 1%;
 }
 
-.sidenav_button {
+.sidenav_buttons button {
     position: absolute;
 
     top: 0%;
     left: 100%;
 
-    
     width: 2rem;
     height: 2rem;
     
     cursor: pointer;
 
+    transition: background-image 1s;
+
     border: none;
-    background: none;
+    background-color: transparent;
     background-size: cover;
+}
+
+
+.sidenav_button_left {
+    display: none;
+}
+
+.sidenav_button_right {
+    display: block;
 }
 
 .sidenav_navigation {
@@ -107,7 +117,6 @@ body {
 
 .sidenav_navigation a:hover {
     font-weight: bold;
-    text-decoration: wavy;
 }
 
 .sidenav_themes {
@@ -141,7 +150,6 @@ body {
 }
 
 .sidenav_themes button:hover {
-    font-weight: bold;
     text-decoration: wavy;
 }
 
@@ -240,4 +248,8 @@ body {
     font-size: 1.5rem;
     margin: 2.5rem 1.5rem;
     width: 40%;
+}
+
+.wheel_colors div {
+    transition: color 1s;
 }

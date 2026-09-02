@@ -9,7 +9,7 @@ Another goal is for the website is to be customizable, using different themes in
 This module of the website, supports generating single random number from a given range with the ability to remove certain numbers (e.g. students not present). Another funcionality of this module is the ability to remove numbers from the pool after being drawn. 
 
 ### Wheel 🛞
-Single mode of the website now utilizes a fortune wheel to generate numbers in an entertaining way. This wheel is affected by all the changes in the number pool.
+Single mode of the website now utilizes a fortune wheel to generate numbers in an entertaining way. This wheel is affected by all the changes in the number pool or theme of the website.
 
 ## Working website 🌐
 For those that do not want or know how to download this project from github you can check it out on my website.  
@@ -21,7 +21,7 @@ Those websites are updated from time to time, yet the newest version of the proj
 In the near future my main goal is to finish the single mode of the website. This task requires following upgrades and features to be in place:
 - [ ] Add *css* styling to buttons and text on the right,
 - [X] Add themes and the ability to change them,
-- [ ] Make the wheel respond to themes,
+- [X] Make the wheel respond to themes,
 - [X] Allow cancel and confirm buttons in the modify pool to influence input fields,
 - [ ] Make the website scale better when resizing,
 - [X] Add navigation bar that would allow navigating the website,

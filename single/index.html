@@ -22,7 +22,10 @@
     </div>
 
     <div id="sidenav" class="sidenav">
-      <button id="sidenav_button" class="sidenav_button" onclick="switchSidenavVisibility()" > </button>
+      <div class="sidenav_buttons">
+        <button id="sidenav_button_right" class="sidenav_button_right" onclick="openSidenav()" > </button>
+        <button id="sidenav_button_left" class="sidenav_button_left" onclick="closeSidenav()" > </button>
+      </div>
 
       <div class="sidenav_navigation">
         <h data-i18n="navigation"> NAVIGATION </h>
@@ -32,8 +35,8 @@
 
       <div class="sidenav_themes">
         <h data-i18n="themes"> THEMES </h>
-        <button id="theme-froggy" onclick="changeTheme('froggy')" data-i18n="theme-froggy"> Froggy </button>
-        <button id="theme-space" onclick="changeTheme('space')" data-i18n="theme-space"> Space </button>
+        <button id="theme_froggy" onclick="changeTheme('froggy')" data-i18n="theme-froggy"> Froggy </button>
+        <button id="theme_space" onclick="changeTheme('space')" data-i18n="theme-space"> Space </button>
       </div>
     </div>
 
@@ -59,11 +62,11 @@
       <canvas id="wheel_canvas" data-i18n="canvas-not-supported" class="wheel_canvas" width="900" height="800" >
         You browser does not support canvas
       </canvas>
+
       <div class="menu">
         <p data-i18n="the-number-is" class="result_text"> The number is: </p>
         <p id="result_display" class="result_display"> </p>
         
-  
         <div class="menu_buttons_parent">
           <button onclick="spinWheel()" data-i18n="generate" class="generate_button"> Generate </button>
           <button onclick="removeLastNumber()" id="remove_button" data-i18n="remove-number" class="remove_button"> Remove </button>
@@ -74,9 +77,13 @@
           </div>
         </div>
       </div>
+
+      <div id="wheel_colors" class="wheel_colors">
+        <div id="wheel_color_1" class="wheel_color_1"></div>
+        <div id="wheel_color_2" class="wheel_color_2"></div>
+        <div id="wheel_color_3" class="wheel_color_3"></div>
+      </div>
     </div>
-
-
   </body>
 
   <script src="single.js"></script>
