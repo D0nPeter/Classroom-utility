@@ -19,7 +19,7 @@ Those websites are updated from time to time, yet the newest version of the proj
 
 ## Plans for future 📈
 In the near future my main goal is to finish the single mode of the website. This task requires following upgrades and features to be in place:
-- [ ] Add *css* styling to buttons and text on the right,
+- [X] Add *css* styling to buttons and text on the right,
 - [X] Add themes and the ability to change them,
 - [X] Make the wheel respond to themes,
 - [X] Allow cancel and confirm buttons in the modify pool to influence input fields,

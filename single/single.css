@@ -1,14 +1,11 @@
 body {
     margin: 0;
-    transition: background-color 1s;
 }
 
 .upper_navbar {
     width: 100%;
     height: 10%;
     display: block;
-
-    transition: background-color 1s;
 }
 
 .upper_navbar button {
@@ -47,14 +44,13 @@ body {
 }
 
 .sidenav {
-    display: block;
     position: fixed;
-
+    
     z-index: 1;
     height: 100%;
     width: 0%;
 
-    transition: width 0.5s, background-color 1s;
+    transition: width 0.5s;
 
     padding-top: 1%;
 }
@@ -69,8 +65,6 @@ body {
     height: 2rem;
     
     cursor: pointer;
-
-    transition: background-image 1s;
 
     border: none;
     background-color: transparent;
@@ -98,7 +92,7 @@ body {
 
     font-weight: bold;
 
-    transition: width 0.3s, color 1s;
+    transition: width 0.3s;
     white-space: nowrap;
 }
 
@@ -111,7 +105,7 @@ body {
     font-weight: normal;
     text-decoration: none;
 
-    transition: width 0.3s, color 1s;
+    transition: width 0.3s;
     white-space: nowrap;
 }
 
@@ -132,7 +126,7 @@ body {
 
     font-weight: bold;
 
-    transition: width 0.3s, color 1s;
+    transition: width 0.3s;
     white-space: nowrap;
 }
 
@@ -145,7 +139,7 @@ body {
     border: none;
     background: none;
 
-    transition: width 0.3s, color 1s;
+    transition: width 0.3s;
     white-space: nowrap;
 }
 
@@ -155,42 +149,54 @@ body {
 
 .wheel_canvas {
     display: inline-block;
-    padding: 1.5% 0;
+    padding: 1.5% 0 0 0;
 }
 
 .menu {
     display: inline-block;
     position: absolute;
-    top: 35%;
+    top: 30%;
     width: 30%;
     height: 40%;
     padding-left: 10%;
 }
 
 .menu p {
-    text-align: center;
-    margin: 0 auto;
     display: block;
+    text-align: center;
 }
 
 .result_text {
+    margin: 0 auto;
     font-size: 3rem;
 }
 
 .result_display {
     font-size: 4rem;
     height: 1.5em;
+    margin: 1rem auto 0 auto;
+}
+
+.menu_buttons_parent button {
+    cursor: pointer;
 }
 
 .generate_button {
-    font-size: 2rem;
     display: block;
+    width: 15rem;
+    height: 5rem;
+
+    font-size: 3rem;
+
     margin: 2% auto;
 }
 
 .remove_button {
-    font-size: 2rem;
     display: none;
+    width: 15rem;
+    height: 5rem;
+    
+    font-size: 2rem;
     margin: 2% auto;
 }
 
@@ -201,8 +207,11 @@ body {
 }
 
 .modify_buttons_parent button {
-    font-size: 1.5rem;
     display: block;
+    width: 10rem;
+    height: 4rem;
+    
+    font-size: 1.5rem;
     margin: 0.5rem;
 }
 
@@ -218,10 +227,10 @@ body {
 .range_form_content {
     display: block;
     position: fixed; 
+    width: 40%;
+    height: 25rem;
     left: 30%;
     top: 30%;
-    width: 40%;
-    height: 40%;
 }
 
 .range_form_content label {
@@ -248,8 +257,4 @@ body {
     font-size: 1.5rem;
     margin: 2.5rem 1.5rem;
     width: 40%;
-}
-
-.wheel_colors div {
-    transition: color 1s;
 }

@@ -79,6 +79,7 @@ window.addEventListener("themeChanged", themeChanged, false);
 
 function initSingle(){
     fillPool();
+    resizeCanvas();
     requestAnimationFrame(drawWheel);
 }
 

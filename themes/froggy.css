@@ -39,6 +39,26 @@ body {
     color: white;
 }
 
+.result_text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #00420e;
+}
+
+.result_display {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #00420e;
+}
+
+.menu_buttons_parent button {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #008800;
+    border: none;
+}
+
+.menu_buttons_parent button:hover {
+    background-color: #006800;
+}
 
 .range_form {
     background-color: #00000088;

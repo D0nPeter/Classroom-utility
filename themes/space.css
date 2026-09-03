@@ -3,7 +3,7 @@ body {
 }
 
 .upper_navbar {
-    background-color: rgb(2, 0, 148);
+    background-color: #020094;
 }
 
 .title {
@@ -12,7 +12,7 @@ body {
 }
 
 .sidenav {
-    background-color: rgb(0, 90, 173);
+    background-color: #005AAD;
 }
 
 .sidenav_button_left {
@@ -39,6 +39,26 @@ body {
     color: white;
 }
 
+.result_text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.result_display {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.menu_buttons_parent button {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #005AAD;
+    border: none;
+}
+
+.menu_buttons_parent button:hover {
+    background-color: #020094;
+}
 
 .range_form {
     background-color: #00000088;
