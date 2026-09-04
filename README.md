@@ -23,10 +23,10 @@ In the near future my main goal is to finish the single mode of the website. Thi
 - [X] Add themes and the ability to change them,
 - [X] Make the wheel respond to themes,
 - [X] Allow cancel and confirm buttons in the modify pool to influence input fields,
-- [ ] Make the website scale better when resizing,
+- [X] Make the website scale better when resizing,
 - [X] Add navigation bar that would allow navigating the website,
 - [X] Fix errors that may arise from using negative numbers,
-- [ ] Removing number from the number pool for a certain number of spins.
+- ~~[ ] Removing number from the number pool for a certain number of spins.~~
 
 <sup> Checked tasks are already completed. </sup>
 

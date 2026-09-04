@@ -94,7 +94,7 @@ function themeChanged(){
 }
 
 function openSidenav() {
-    document.getElementById("sidenav").style.width = "14%";
+    document.getElementById("sidenav").style.width = "15%";
 
     document.getElementById("sidenav_button_right").style.display = "none";
     document.getElementById("sidenav_button_left").style.display = "block";
@@ -176,7 +176,11 @@ function shuffle(arr){
 }
 
 function spinWheel(){
+    if(stage != 0){
+        return;
+    }
     stage = 1;
+    document.getElementById("generate_button").disabled = true;
     
     positionToRemove = -1;
     document.getElementById("remove_button").style.display = "none";
@@ -204,6 +208,7 @@ function displayResult(){
     positionToRemove = numberPool.length - Math.ceil(rotation / angPerNumber);
     let number = numberPool[positionToRemove];
 
+    document.getElementById("generate_button").disabled = false;
     document.getElementById("remove_button").style.display = "block";
     document.getElementById("result_display").innerText = number;
 }

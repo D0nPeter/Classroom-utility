@@ -1,30 +1,30 @@
 body {
     margin: 0;
+    overflow: hidden;
 }
 
 .upper_navbar {
-    width: 100%;
-    height: 10%;
     display: block;
+    width: 100%;
+    height: 10vh;
+}
+
+.title {
+    display: inline-block;
+    margin: 1vmin;
+    font-size: 7vmin;
 }
 
 .upper_navbar button {
     float: right;
-    margin: 1rem;
+    margin: 2vmin 2vmin;
 
-    width: 5rem;
-    height: 3rem;
+    width: 10vmin;
+    height: 6vmin;
 
     background-size: cover;
     border: none;
     cursor: pointer;
-}
-
-.title {
-    font-size: 350%;
-    margin: .5rem;
-
-    display: inline-block;
 }
 
 .language_button_pl {
@@ -61,8 +61,8 @@ body {
     top: 0%;
     left: 100%;
 
-    width: 2rem;
-    height: 2rem;
+    width: 5vmin;
+    height: 5vmin;
     
     cursor: pointer;
 
@@ -85,10 +85,10 @@ body {
 }
 
 .sidenav_navigation h {
-    font-size: 2rem;
+    font-size: 1.75vw;
     display: block;
 
-    padding: 0 0 1rem 1rem;
+    padding: 0 0 1vh 1vw;
 
     font-weight: bold;
 
@@ -97,10 +97,10 @@ body {
 }
 
 .sidenav_navigation a {
-    font-size: 2rem;
+    font-size: 1.75vw;
     display: block;
 
-    padding: 0.5rem 0 0.5rem 1rem;
+    padding: 0.5vh 0 0.5vh 1vw;
 
     font-weight: normal;
     text-decoration: none;
@@ -114,15 +114,15 @@ body {
 }
 
 .sidenav_themes {
-    padding-top: 200%;
+    padding-top: calc(78vh - 10vw);
     overflow-x: hidden;
 }
 
 .sidenav_themes h {
-    font-size: 1.75rem;
+    font-size: 1.5vw;
     display: block;
 
-    padding: 0 0 0 1rem;
+    padding: 0 0 0 1vw;
 
     font-weight: bold;
 
@@ -131,10 +131,10 @@ body {
 }
 
 .sidenav_themes button {
-    font-size: 1.5rem;
+    font-size: 1.25vw;
     display: block;
 
-    padding: 0.5rem 0 0 1.5rem;
+    padding: 0.5vh 0 0 1.5vw;
 
     border: none;
     background: none;
@@ -155,7 +155,7 @@ body {
 .menu {
     display: inline-block;
     position: absolute;
-    top: 30%;
+    top: calc(50% - 10rem);
     width: 30%;
     height: 40%;
     padding-left: 10%;
@@ -189,6 +189,10 @@ body {
     font-size: 3rem;
 
     margin: 2% auto;
+}
+
+.generate_button:disabled {
+    cursor: not-allowed !important;
 }
 
 .remove_button {
@@ -230,7 +234,7 @@ body {
     width: 40%;
     height: 25rem;
     left: 30%;
-    top: 30%;
+    top: calc(50% - 12.5rem);
 }
 
 .range_form_content label {

@@ -13,15 +13,15 @@
   <link rel="stylesheet" href="../themes/froggy.css" id="theme_link">
   
   <body>
-    <div class="upper_navbar">
+    <header class="upper_navbar">
       <h class="title" data-i18n="title-single"> Single mode</h>
       <button class="language_button_la" onclick="changeLanguage('la')"> </button>
       <button class="language_button_de" onclick="changeLanguage('de')"> </button>
       <button class="language_button_en" onclick="changeLanguage('en')"> </button>
       <button class="language_button_pl" onclick="changeLanguage('pl')"> </button>
-    </div>
+    </header>
 
-    <div id="sidenav" class="sidenav">
+    <aside id="sidenav" class="sidenav">
       <div class="sidenav_buttons">
         <button id="sidenav_button_right" class="sidenav_button_right" onclick="openSidenav()" > </button>
         <button id="sidenav_button_left" class="sidenav_button_left" onclick="closeSidenav()" > </button>
@@ -38,7 +38,7 @@
         <button id="theme_froggy" onclick="changeTheme('froggy')" data-i18n="theme-froggy"> Froggy </button>
         <button id="theme_space" onclick="changeTheme('space')" data-i18n="theme-space"> Space </button>
       </div>
-    </div>
+    </aside>
 
     <div class="range_form" id="range_form">
       <div class="range_form_content"> 
@@ -68,7 +68,7 @@
         <p id="result_display" class="result_display"> </p>
         
         <div class="menu_buttons_parent">
-          <button onclick="spinWheel()" data-i18n="generate" class="generate_button"> Generate </button>
+          <button onclick="spinWheel()" id="generate_button" data-i18n="generate" class="generate_button"> Generate </button>
           <button onclick="removeLastNumber()" id="remove_button" data-i18n="remove-number" class="remove_button"> Remove </button>
     
           <div class="modify_buttons_parent">
