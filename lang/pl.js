@@ -1,4 +1,19 @@
 window.translation = {
+    "main-title": "Strona główna",
+
+    "modes": "Tryby",
+    "single": "Jeden numerek",
+    "single-desc": "W tym trybie można wylosować pojedyncze numerki, korzystając z koła fortuny.",
+
+    "usefull-links": "Przydatne linki",
+    "readme": "README",
+    "readme-desc": "Plik README.md tego projektu. Zaleca się otwieranie go z wtyczką pozwalającą czytać pliki Mardown.",
+    "github-repo": "GitHub",
+    "github-desc": "Publiczne repozytorium tego projektu na GitHubie. Można pobrać stamtąd cały ten projekt.",
+    "waltz-no-2": "Walc nr 2",
+    "waltz-desc": "Wspaniały walc skomponowany przez Dymitra Szostakowicza w wykonaniu Andre Rieu i jego orkiestry Johana Straussa.",
+
+
     "title-single": "Jeden numerek",
     "lowest-number": "Najniższy numer",
     "highest-number": "Najwyższy numer",

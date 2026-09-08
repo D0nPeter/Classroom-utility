@@ -38,7 +38,6 @@ function applyTranslation(translation){
     })
 }
 
-
 async function loadLanguageScript(lang){
     if(!lang){
         console.error("No language given for loading");
