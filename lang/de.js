@@ -7,7 +7,7 @@ window.translation = {
 
     "usefull-links": "Nützliche Links",
     "readme": "README",
-    "readme-desc": "Die README.md-Datei dieses Projekts. Es wird empfohlen, sie mit einem Plugin zu öffnen, das das Lesen von Markdown-Dateien ermöglicht.",
+    "readme-desc": "README.md-Datei dieses Projekts. Es wird empfohlen, sie mit einem Plugin zu lesen, das Markdown-Dateien unterstützt.",
     "github-repo": "GitHub",
     "github-desc": "Das öffentliche Repository dieses Projekts auf GitHub. Man kann das gesamte Projekt von dort herunterladen.",
     "waltz-no-2": "Walzer Nr. 2",
