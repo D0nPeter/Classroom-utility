@@ -1,6 +1,3 @@
-const canvas = document.getElementById("wheel_canvas");
-const ctx = canvas.getContext("2d");
-
 ///
 //  Wheel rotation constants
 ///
@@ -69,6 +66,8 @@ let max = 34;
 /// 
 // Other variables
 /// 
+let canvas;
+let ctx;
 let positionToRemove = -1;
 let numberPool = [];
 let isExcluded = new Array(max+1).fill(false);
@@ -78,6 +77,9 @@ window.addEventListener("resize", resizeCanvas, false);
 window.addEventListener("themeChanged", themeChanged, false);
 
 function initSingle(){
+    canvas = document.getElementById("wheel_canvas");
+    ctx = canvas.getContext("2d");
+
     fillPool();
     resizeCanvas();
     requestAnimationFrame(drawWheel);
