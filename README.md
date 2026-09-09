@@ -2,25 +2,33 @@ Classrom Utility
 ==================
 
 ## Aim of the project 🎯
-Aim of the project is to create website, that would help teachers with such activities as picking a radnom student or assigning pupils into groups. As tasks like choosing random person and grouping people are also common outside classroom, this project also aims to help everyone in need of asistance with those tasks.  
+Aim of the project is to create website, that would help teachers with such activities as picking a random student or assigning pupils into groups. 
+As tasks like choosing random person and grouping people are also common outside classroom, this project also aims to help everyone in need of asistance with those tasks.  
 
 ### Customization
-Another goal is for the website is to be customizable, to appeal to wide audience. This, as of now, includes 4 available languages and 2 themes. 
+Another goal is for the website is to be customizable, to appeal to wide audience. 
+This, as of now, includes 4 available languages and 2 themes. 
 
 ### Skill development 
-This project was created with no previous knowledge of *html*, *css*, *javascript*, *markdown* or *vector graphics*. It's third goal was to learn basics of web development, utilizing available resources like **MDN Web Docs**, **W3Schools** and **StackOverflw**. This project stands as a testimony, that this goal was achieved. 
+This project was created with no previous knowledge of *html*, *css*, *javascript*, *markdown* or *vector graphics*. 
+It's third goal was to learn basics of web development, utilizing available resources like **MDN Web Docs**, **W3Schools** and **StackOverflw**. 
+This project stands as a testimony, that this goal was achieved. 
 
 ### AI disclaimer 
-As I am against *turning thinking to machines*, code in this project was mostly hand written. I used AI in a few cases to search for bugs or validate execution of my ideas, because, as I have mentioned above, my web development skills were developing alongside the project.
+As I am against *turning thinking to machines*, code in this project was mostly hand written. 
+I used AI in a few cases to search for bugs or validate execution of my ideas, because, as I have mentioned above, my web development skills were developing alongside the project.
 
 <br>
 
 ## Single number random generator 🎲
-This module of the website, supports generating single random number from a given range with the ability to remove certain numbers from the pool (e.g. students not present). Additionally, it allows you to remove the number from the pool after being drawn or revert the pool to it's original state.  
+This module of the website, supports generating single random number from a given range with the ability to remove certain numbers from the pool (e.g. students not present). 
+Additionally, it allows you to remove the number from the pool after being drawn or revert the pool to it's original state.  
 It is the only working module of the website at the moment, however this will change soon.
 
 ### Wheel 🛞
-Single mode of the website utilizes a fortune wheel to generate numbers in an entertaining way. This wheel is affected by all the changes in the number pool or theme of the website. It also scales to remain around the same size on all screens.
+Single mode of the website utilizes a fortune wheel to generate numbers in an entertaining way. 
+This wheel is affected by all the changes in the number pool or theme of the website. 
+It also scales to remain around the same size on all screens.
 
 <br>
 
@@ -39,10 +47,12 @@ Currently website supports 4 languages (on all sites). Those languages are:
 - German, 
 - Latin.  
 
-As I am only proficient in polish and english, I would appreciate any help with improving translation of the other 2 languages (german and latin) or any initiative to add other languages. Should you be willing to help with this task, contact me at <PiStudio124@gmail.com> or submit a pull request to [GitHub repository](https://github.com/D0nPeter/Classroom-utility/) of this project.
+As I am only proficient in polish and english, I would appreciate any help with improving translation of the other 2 languages (german and latin) or any initiative to add other languages. 
+Should you be willing to help with this task, contact me at <PiStudio124@gmail.com> or submit a pull request to [GitHub repository](https://github.com/D0nPeter/Classroom-utility/) of this project.
 
 ### Themes 🐸
-Website supports (at least in single mode) changing themes. Those themes are not standard light and dark mode but are rather supposed to be more cheerfull, based on locations from different tales like:
+Website supports (at least in single mode) changing themes. 
+Those themes are not standard light and dark mode but are rather supposed to be more cheerfull, based on locations from different tales like:
 - **Frogs**,
 - **Space**,
 - Woods,
