@@ -20,6 +20,8 @@ window.translation = {
     "excluded-numbers": "Exclusi numeri",
     "enter-number": "Numerum praebere",
     "enter-numbers": "Numeros praebere",
+    "removed-after-drawn": "Extractus remotusque",
+    "no-removed-numbers": "Nulli numeri remoti",
     "cancel": "Tollere",
     "confirm": "Confirmare",
     "modify-values": "Spatium mutare",

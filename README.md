@@ -76,6 +76,6 @@ I plan to improve this project constantly. Goals for the future are shown in the
 | Part of the website | New features | Changes |
 |:--------------------|:-------------|:--------|
 | Main Page           | <ul> <li> Ability to change themes. </li> <li> Image at the top of the website. </li> </ul> | <ul> <li> Change of descriptions of nonexistent modes. </li> </ul> |
-| Single Mode         | <ul> <li> New field in the modify pool panel, that shows numbers removed after being drawn </li> <li> Different backgrounds based on the current theme. </li> </ul> | <ul> <li> Numbers removed from the pool after being drawn will go to the new field in modify pool panel to fix the functioning of <i>Reset values</i> button. </li> </ul> |
+| Single Mode         | <ul> <li> Different backgrounds based on the current theme. </li> </ul> | <ul> </ul> |
 | Text Mode           | <ul> <li> Adding mode of the website that lets you get random text value from fortune wheel. </li> <ul> | | 
 

@@ -70,7 +70,8 @@ let canvas;
 let ctx;
 let positionToRemove = -1;
 let numberPool = [];
-let isExcluded = new Array(max+1).fill(false);
+// Number states   0 - present    1 - excluded    2 - removed after being drawn
+let numberState = new Array(max+1).fill(0);
 
 window.addEventListener("load", initSingle, false);
 window.addEventListener("resize", resizeCanvas, false);
@@ -79,6 +80,8 @@ window.addEventListener("themeChanged", themeChanged, false);
 function initSingle(){
     canvas = document.getElementById("wheel_canvas");
     ctx = canvas.getContext("2d");
+
+    numberState = new Array(max+1).fill(0);
 
     fillPool();
     resizeCanvas();
@@ -115,15 +118,27 @@ function setValues(){
     min = Math.max(min, 1);
     max = Math.min(max, MAX_MAX);
 
-    isExcluded = new Array(max+1).fill(false);
+    while(numberState.length > max+1){
+        numberState.pop();
+    }
+    while(numberState.length <= max){
+        numberState.push(0);
+    }
+
     let excludedInput = document.getElementById("excluded_numbers").value;
     let excludedList = excludedInput.split(",");
 
-    for(var i = 0; i < excludedList.length; i++){
+    for(let i = 0; i < max; i++){
+        if(numberState[i] == 1){
+            numberState[i] = 0;
+        }
+    }
+
+    for(let i = 0; i < excludedList.length; i++){
         let num = parseInt(excludedList[i].trim());
 
         if(!isNaN(num) && num >= min && num <= max){
-            isExcluded[num] = true;
+            numberState[num] = 1;
         }
     }
 
@@ -134,37 +149,56 @@ function setValues(){
 function showRangeForm(){
     document.getElementById("range_form").style.display = "block";
 
-    updateRangeFormInputs();
+    updateRangeFormFields();
 }
 
 function hideRangeForm(){
     document.getElementById("range_form").style.display = "none";
 }
 
-function updateRangeFormInputs(){
+function updateRangeFormFields(){
     document.getElementById("lowest_number").value = min;
     document.getElementById("highest_number").value = max;
 
     let excluded_string = "";
-    for(let i = 0; i < isExcluded.length; i++){
-        if(isExcluded[i]){
+    let removed_string = "";
+    for(let i = 0; i < numberState.length; i++){
+        if(numberState[i] == 1){
             excluded_string += `${i}, `;
+        }else if(numberState[i] == 2){
+            removed_string += `${i}, `;
         }
     }
 
     document.getElementById("excluded_numbers").value = excluded_string.substring(0, excluded_string.length - 2);
+
+    if(removed_string.length){
+        document.getElementById("removed_numbers").textContent = removed_string.substring(0, removed_string.length - 2);
+    }else{
+        document.getElementById("removed_numbers").textContent = window.translation["no-removed-numbers"];
+    }
 }
 
 function fillPool(){
     numberPool = [];
 
     for (let i = min; i <= max; i++) {
-        if(!isExcluded[i]){
+        if(numberState[i] == 0){
             numberPool.push(i);
         }
     }
 
     shuffle(numberPool);
+}
+
+function refillPool(){
+    for (let i = min; i <= max; i++) {
+        if(numberState[i] == 2){
+            numberState[i] = 0;
+        }
+    }
+
+    fillPool();
 }
 
 function shuffle(arr){
@@ -198,7 +232,7 @@ function removeLastNumber(){
         return;
     }
 
-    isExcluded[numberPool[positionToRemove]] = true;
+    numberState[numberPool[positionToRemove]] = 2;
     numberPool.splice(positionToRemove, 1);
     
     positionToRemove = -1;
