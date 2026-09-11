@@ -11,7 +11,7 @@ This, as of now, includes 4 available languages and 2 themes.
 
 ### Skill development 
 This project was created with no previous knowledge of *html*, *css*, *javascript*, *markdown* or *vector graphics*. 
-It's third goal was to learn basics of web development, utilizing available resources like **MDN Web Docs**, **W3Schools** and **StackOverflw**. 
+It's third goal was to learn basics of web development, utilizing available resources like **MDN Web Docs**, **W3Schools** and **StackOverflow**. 
 This project stands as a testimony, that this goal was achieved. 
 
 ### AI disclaimer 
