@@ -4,6 +4,8 @@ window.translation = {
     "modes": "Modi",
     "single": "Unus Numerus",
     "single-desc": "Hac ratione, numeros singulos rota fortunae ducere potes.",
+    "lacking-mode": "Nihil",
+    "lacking-desc": "Hic modus mox addetur.",
 
     "usefull-links": "Nexus Utiles",
     "readme": "README",

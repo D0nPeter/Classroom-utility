@@ -4,6 +4,8 @@ window.translation = {
     "modes": "Tryby",
     "single": "Jeden numerek",
     "single-desc": "W tym trybie można wylosować pojedyncze numerki, korzystając z koła fortuny.",
+    "lacking-mode": "Brak",
+    "lacking-desc": "Ten tryb zostanie niedługo dodany.",
 
     "usefull-links": "Przydatne linki",
     "readme": "README",

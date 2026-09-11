@@ -4,6 +4,8 @@ window.translation = {
     "modes": "Modes",
     "single": "Single",
     "single-desc": "In this mode you can get a random number from a given range, with the help of a fortune wheel.",
+    "lacking-mode": "None",
+    "lacking-desc": "This mode will be added soon.",
 
     "usefull-links": "Usefull links",
     "readme": "README",

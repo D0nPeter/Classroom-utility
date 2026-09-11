@@ -4,6 +4,8 @@ window.translation = {
     "modes": "Modi",
     "single": "Einzelnummer",
     "single-desc": "In diesem Modus können mithilfe eines Glücksrads einzelne Zahlen ausgelost werden",
+    "lacking-mode": "Nichts",
+    "lacking-desc": "Dieses Modus wird bald erstellen sein.",
 
     "usefull-links": "Nützliche Links",
     "readme": "README",
