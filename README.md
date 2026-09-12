@@ -37,11 +37,11 @@ The table below shows the current state of implentation of different features of
 
 | Part of the website | Multi-language | Themes | Screen scaling |
 |:--------------------|:--------------:|:------:|:--------------:|
-| Main Page           |       YES      |   NO   |       YES      |
+| Main Page           |       YES      |   YES  |       YES      |
 | Single Mode         |       YES      |   YES  |       NO       |
 
 ### Languages 📖
-Currently website supports 4 languages (on all sites). Those languages are:  
+Currently website supports 4 languages. Those languages are:  
 - Polish,
 - English,
 - German, 
@@ -51,7 +51,7 @@ As I am only proficient in polish and english, I would appreciate any help with 
 Should you be willing to help with this task, contact me at <PiStudio124@gmail.com> or submit a pull request to [GitHub repository](https://github.com/D0nPeter/Classroom-utility/) of this project.
 
 ### Themes 🐸
-Website supports (at least in single mode) changing themes. 
+Website supports changing themes. 
 Those themes are not standard light and dark mode but are rather supposed to be more cheerfull, based on locations from different tales like:
 - **Frogs**,
 - **Space**,
