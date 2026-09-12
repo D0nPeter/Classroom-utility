@@ -1,8 +1,12 @@
 const languageArray = ['pl', 'en', 'de', 'la'];
+const themeArray = ['froggy', 'space'];
+
 const flagPath = 'image/flags/flag_';
+const iconPath = 'image/icons/';
 
 let languageScript;
 let currentLang = -1;
+let currentTheme = -1;
 
 window.languageChangedEvent = new Event("languageChanged");
 
@@ -10,7 +14,12 @@ window.addEventListener("load", initMain, false);
 
 function initMain(){
     numChangeLanguage(languageArray.indexOf(getPreferredLanguage()));
+    numChangeTheme(themeArray.indexOf(getPrefferedTheme()));
 }
+
+/// 
+//  LANGUAGES
+/// 
 
 function numChangeLanguage(btnNumber){
     if(btnNumber <= currentLang){
@@ -93,4 +102,45 @@ async function loadLanguageScript(lang){
     };
 
     document.head.appendChild(languageScript);
+}
+
+///
+//  THEMES
+/// 
+
+function numChangeTheme(btnNumber){
+    if(btnNumber <= currentTheme){
+        btnNumber--;
+    }
+    currentTheme = btnNumber;
+
+    updateThemeButtons();
+
+    changeTheme(themeArray[currentTheme]);
+}
+
+function updateThemeButtons(){
+    let btnI = 1;
+    for(let i=0; i<themeArray.length; i++){
+        if(i == currentTheme){
+            document.getElementById("theme_button").style.backgroundImage = `url('${iconPath + themeArray[i] + ".svg"}')`;
+        }else{
+            document.getElementById(`theme_button_${btnI}`).style.backgroundImage = `url('${iconPath + themeArray[i] + ".svg"}')`;
+            btnI++;
+        }
+    }
+}
+
+function changeTheme(theme){
+    document.getElementById("theme_link").href = "themes/" + theme + ".css";
+
+    setPreferredTheme(theme)
+}
+
+function getPrefferedTheme(){
+    return localStorage.getItem("preferredTheme") || "froggy";
+}
+
+function setPreferredTheme(theme){
+    localStorage.setItem("preferredTheme", theme);
 }

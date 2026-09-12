@@ -1,6 +1,32 @@
-body {
+/*
+    UTILITY CLASSES
+*/
+
+.background_color {
     background-color: #88c083;
 }
+
+/*
+    SECTION MAIN PAGE
+*/
+
+.nav_block_parent {
+    background-color: #609e5a;
+}
+
+.main_image_container {
+    background-image: url('../image/background/Background_froggy.png')
+}
+
+.nav_image_background {
+    width: 100%;
+    height: 50%;
+    background-image: url("../image/background/Background_froggy.png");
+}
+
+/*
+    SECTION SINGLE MODE
+*/
 
 .upper_navbar {
     background-color: darkgreen;

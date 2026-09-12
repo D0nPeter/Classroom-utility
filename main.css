@@ -5,34 +5,76 @@ body {
 .main_image_container {
     width: 100%;
     height: 70vh;
+    background-size: cover;
 }
 
-.main_image_container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.theme_dropdown {
+    position: absolute;
+
+    width: 8vmin;
+    height: 10vmin;
+    top: 1vmin;
+    left: 1vmin;
+}
+
+.theme_dropdown button {
+    padding: 0;
+    border: none;
+    background-size: cover;
+    background-color: transparent;
+}
+
+.theme_button {
+    width: 8vmin;
+    height: 8vmin;
+}
+
+.theme_dropdown_content {
+    display: none;
+
+    width: 6vmin;
+    height: 15vmin;
+
+    justify-self: center;
+    justify-content: left;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1vmin;
+}
+
+.theme_dropdown_content button {
+    width: 6vmin;
+    height: 6vmin;
+    
+    cursor: pointer;
+}
+
+/* Showing the theme dropdown */
+.theme_dropdown:hover .theme_dropdown_content {
+    display: flex;
 }
 
 .language_dropdown {
     position: absolute;
 
     width: 10vmin;
-    height: 8vmin;
-    top: .5%;
-    right: 1%;
+    height: 6vmin;
+    top: 1vmin;
+    right: 1vmin;
 }
 
 .language_dropdown button {
-    border: none;
+    padding: 0;
+    border: 0;
     background-size: cover;
-    justify-self: center;
 }
 
 .language_button {
     width: 10vmin;
     height: 6vmin;
 
-    margin: 1vmin 0;
+    margin-bottom: 1vmin;
 }
 
 .language_dropdown_content {
@@ -60,7 +102,6 @@ body {
     display: flex;
 }
 
-
 .section_nav {
     padding: 0 0 10rem 0;
     border-top: 3px solid black;
@@ -77,7 +118,7 @@ body {
     font-family: Arial, Helvetica, sans-serif
 }
 
-nav {
+.nav_block_parent {
     display: flex;
     width: 90%;
     padding: 2rem 0;
@@ -89,8 +130,6 @@ nav {
     align-items: center;
 
     gap: 1rem;
-
-    background-color: #eaeaea;
 }
 
 .nav_block {
@@ -105,9 +144,15 @@ nav {
     overflow: hidden;
 }
 
-.nav_block img {
+.nav_image_background {
     width: 100%;
     height: 50%;
+    background-size: cover;
+}
+
+.nav_image_background img {
+    width: 100%;
+    height: 100%
 }
 
 .nav_block a {

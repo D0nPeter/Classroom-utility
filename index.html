@@ -6,11 +6,18 @@
         <meta charset="UTF-8">
 
         <script src="main.js" defer></script>
+
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="themes/froggy.css" id="theme_link">
     </head>
-    <body>
+    <body class="background_color">
         <div class="main_image_container">
-            <img src="image/background/Background_froggy.png"> 
+            <div class="theme_dropdown">
+                <button id="theme_button" class="theme_button"> </button> 
+                <div class="theme_dropdown_content">
+                    <button id="theme_button_1" onclick="numChangeTheme(1)"> </button> 
+                </div>
+            </div>
 
             <div class="language_dropdown">
                 <button id="language_button" class="language_button"> </button> 
@@ -24,19 +31,25 @@
         
         <div class="section_nav">
             <h1 data-i18n="modes"> MODES </h1>
-            <nav>
+            <nav class="nav_block_parent">
                 <div class="nav_block">
-                    <img src="image/navicons/navicon_single.png">
+                    <div class="nav_image_background">
+                        <img src="image/navicons/navicon_single.png">
+                    </div>
                     <a href="single/index.html" data-i18n="single"> Single </a>
                     <p data-i18n="single-desc"> Single desc </p>
                 </div>
                 <div class="nav_block">
-                    <img src="image/background/Background_froggy.png">
+                    <div class="nav_image_background">
+                        <img>
+                    </div>
                     <a href="javascript:void(0)" data-i18n="lacking-mode"> None </a>
                     <p data-i18n="lacking-desc"> Text desc </p>
                 </div>
                 <div class="nav_block">
-                    <img src="image/background/Background_froggy.png">
+                    <div class="nav_image_background">
+                        <img>
+                    </div>
                     <a href="javascript:void(0)" data-i18n="lacking-mode"> None </a>
                     <p data-i18n="lacking-desc"> Grouping desc </p>
                 </div>
@@ -45,19 +58,25 @@
         
         <div class="section_usefull">
             <h1 data-i18n="usefull-links"> Usefull Links </h1>
-            <nav>
+            <nav class="nav_block_parent">
                 <div class="nav_block">
-                    <img src="image/navicons/navicon_readme.png">
+                    <div class="nav_image_background">
+                        <img src="image/navicons/navicon_readme.png">
+                    </div>
                     <a target="_blank" href="README.md" data-i18n="readme"> Readme </a>
                     <p data-i18n="readme-desc"> Readme desc </p>
                 </div>
                 <div class="nav_block">
-                    <img src="image/navicons/navicon_github.png">
+                    <div class="nav_image_background">
+                        <img src="image/navicons/navicon_github.png">
+                    </div>
                     <a target="_blank" href="https://github.com/D0nPeter/Classroom-utility/" data-i18n="github-repo"> Github repo </a>
                     <p data-i18n="github-desc"> Github desc </p>
                 </div>
                 <div class="nav_block">
-                    <img src="image/navicons/navicon_waltz.png">
+                    <div class="nav_image_background">
+                        <img src="image/navicons/navicon_waltz.png">
+                    </div>
                     <a target="_blank" href="https://www.youtube.com/watch?v=fd16sNr9T2Q" data-i18n="waltz-no-2"> Waltz no. 2 </a>
                     <p data-i18n="waltz-desc"> Waltz desc </p>
                 </div>

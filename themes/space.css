@@ -1,6 +1,32 @@
-body {
+/*
+    SECTION MODAL
+*/
+
+.background_color {
     background-color: #797db9;
 }
+
+/*
+    SECTION MAIN PAGE
+*/
+
+.nav_block_parent {
+    background-color: #5e63ad;
+}
+
+.main_image_container {
+    background-image: url('../image/background/Background_space.png')
+}
+
+.nav_image_background {
+    width: 100%;
+    height: 50%;
+    background-image: url("../image/background/Background_space.png");
+}
+
+/*
+    SECTION SINGLE MODE
+*/
 
 .upper_navbar {
     background-color: #020094;
