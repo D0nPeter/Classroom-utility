@@ -13,6 +13,7 @@ body {
     display: inline-block;
     margin: 1vmin;
     font-size: 7vmin;
+    font-weight: normal;
 }
 
 .upper_navbar button {
@@ -84,11 +85,12 @@ body {
     overflow-x: hidden;
 }
 
-.sidenav_navigation h {
+.sidenav_navigation h2 {
     font-size: 1.75vw;
     display: block;
-
+    
     padding: 0 0 1vh 1vw;
+    margin: 0;
 
     font-weight: bold;
 
@@ -97,7 +99,7 @@ body {
 }
 
 .sidenav_navigation a {
-    font-size: 1.75vw;
+    font-size: 1.5vw;
     display: block;
 
     padding: 0.5vh 0 0.5vh 1vw;
@@ -118,11 +120,12 @@ body {
     overflow-x: hidden;
 }
 
-.sidenav_themes h {
+.sidenav_themes h2 {
     font-size: 1.5vw;
     display: block;
 
     padding: 0 0 0 1vw;
+    margin: 0;
 
     font-weight: bold;
 
@@ -144,7 +147,7 @@ body {
 }
 
 .sidenav_themes button:hover {
-    text-decoration: wavy;
+    cursor: pointer;
 }
 
 .wheel_canvas {

@@ -6,6 +6,16 @@
     background-color: #88c083;
 }
 
+.body_text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #00420e;
+}
+
+.navbar_text {
+    color: white;
+    font-family: Arial, Verdana;
+}
+
 /*
     SECTION MAIN PAGE
 */
@@ -32,11 +42,6 @@
     background-color: darkgreen;
 }
 
-.title {
-    color: white;
-    font-family: Arial, Verdana;
-}
-
 .sidenav {
     background-color: green;
 }
@@ -47,32 +52,6 @@
 
 .sidenav_button_right {
     background-image: url('../image/buttons/ArrowRight_froggy.svg');
-}
-
-.sidenav_navigation h {
-    color: white;
-}
-
-.sidenav_navigation a {
-    color: white;
-}
-
-.sidenav_themes h {
-    color: white;
-}
-
-.sidenav_themes button {
-    color: white;
-}
-
-.result_text {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #00420e;
-}
-
-.result_display {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #00420e;
 }
 
 .menu_buttons_parent button {

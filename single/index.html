@@ -15,7 +15,7 @@
   
   <body class="background_color">
     <header class="upper_navbar">
-      <h class="title" data-i18n="title-single"> Single mode</h>
+      <h1 class="title navbar_text" data-i18n="title-single"> Single mode</h1>
       <button class="language_button_la" onclick="changeLanguage('la')"> </button>
       <button class="language_button_de" onclick="changeLanguage('de')"> </button>
       <button class="language_button_en" onclick="changeLanguage('en')"> </button>
@@ -29,15 +29,15 @@
       </div>
 
       <div class="sidenav_navigation">
-        <h data-i18n="navigation"> NAVIGATION </h>
-        <a href="../index.html" data-i18n="main-page"> Main Page </a>
-        <a href="javascript:void(0)" data-i18n="single-mode"> Single Mode </a>
+        <h2 class="navbar_text" data-i18n="navigation"> NAVIGATION </h2>
+        <a class="navbar_text" data-i18n="main-page" href="../index.html"> Main Page </a>
+        <a class="navbar_text" data-i18n="single-mode" href="javascript:void(0)"> Single Mode </a>
       </div>
 
       <div class="sidenav_themes">
-        <h data-i18n="themes"> THEMES </h>
-        <button id="theme_froggy" onclick="changeTheme('froggy')" data-i18n="theme-froggy"> Froggy </button>
-        <button id="theme_space" onclick="changeTheme('space')" data-i18n="theme-space"> Space </button>
+        <h2 class="navbar_text" data-i18n="themes"> THEMES </h2>
+        <button id="theme_froggy" class="navbar_text" data-i18n="theme-froggy" onclick="changeTheme('froggy')"> Froggy </button>
+        <button id="theme_space"  class="navbar_text" data-i18n="theme-space" onclick="changeTheme('space')"> Space </button>
       </div>
     </aside>
 
@@ -68,8 +68,8 @@
       </canvas>
 
       <div class="menu">
-        <p data-i18n="the-number-is" class="result_text"> The number is: </p>
-        <p id="result_display" class="result_display"> </p>
+        <p data-i18n="the-number-is" class="result_text body_text"> The number is: </p>
+        <p id="result_display" class="result_display body_text"> </p>
         
         <div class="menu_buttons_parent">
           <button onclick="spinWheel()" id="generate_button" data-i18n="generate" class="generate_button"> Generate </button>
