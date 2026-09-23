@@ -25,13 +25,13 @@
 }
 
 .main_image_container {
-    background-image: url('../image/background/Background_space.png')
+    background-image: url('../../image/background/Background_space.png')
 }
 
 .nav_image_background {
     width: 100%;
     height: 50%;
-    background-image: url("../image/background/Background_space.png");
+    background-image: url("../../image/background/Background_space.png");
 }
 
 /*
@@ -52,11 +52,11 @@
 }
 
 .sidenav_button_left {
-    background-image: url('../image/buttons/ArrowLeft_space.svg');
+    background-image: url('../../image/buttons/ArrowLeft_space.svg');
 }
 
 .sidenav_button_right {
-    background-image: url('../image/buttons/ArrowRight_space.svg');
+    background-image: url('../../image/buttons/ArrowRight_space.svg');
 }
 
 .menu_buttons_parent button {

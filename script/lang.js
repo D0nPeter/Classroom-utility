@@ -49,7 +49,7 @@ async function loadLanguageScript(lang){
 
     languageScript = document.createElement('script');
     languageScript.id = 'languageScript';
-    languageScript.src = `../lang/${lang}.js`;
+    languageScript.src = `../../lang/${lang}.js`;
 
     languageScript.onload = () => {
         if(!window.translation){

@@ -1,7 +1,7 @@
 window.currentTheme = "";
 window.themeChangedEvent = new Event("themeChanged");
 
-const path = '../themes/';
+const path = '../../style/themes/';
 
 window.addEventListener("load", initStyle, false);
 

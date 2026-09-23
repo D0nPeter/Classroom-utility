@@ -1,0 +1,279 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.upper_navbar {
+    display: block;
+    width: 100%;
+    height: 10vh;
+}
+
+.title {
+    display: inline-block;
+    margin: 1vmin;
+    font-size: 7vmin;
+    font-weight: normal;
+}
+
+.upper_navbar button {
+    float: right;
+    margin: 2vmin 2vmin;
+
+    width: 10vmin;
+    height: 6vmin;
+
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+
+.language_button_pl {
+    background-image: url('../../image/flags/flag_pl.svg');
+}
+
+.language_button_en {
+    background-image: url('../../image/flags/flag_en.svg');
+}
+
+.language_button_de {
+    background-image: url('../../image/flags/flag_de.svg');
+}
+
+.language_button_la {
+    background-image: url('../../image/flags/flag_la.svg');
+}
+
+.sidenav {
+    position: fixed;
+    
+    z-index: 1;
+    height: 100%;
+    width: 0%;
+
+    transition: width 0.5s;
+
+    padding-top: 1%;
+}
+
+.sidenav_buttons button {
+    position: absolute;
+
+    top: 0%;
+    left: 100%;
+
+    width: 5vmin;
+    height: 5vmin;
+    
+    cursor: pointer;
+
+    border: none;
+    background-color: transparent;
+    background-size: cover;
+}
+
+
+.sidenav_button_left {
+    display: none;
+}
+
+.sidenav_button_right {
+    display: block;
+}
+
+.sidenav_navigation {
+    overflow-x: hidden;
+}
+
+.sidenav_navigation h2 {
+    font-size: 1.75vw;
+    display: block;
+    
+    padding: 0 0 1vh 1vw;
+    margin: 0;
+
+    font-weight: bold;
+
+    transition: width 0.3s;
+    white-space: nowrap;
+}
+
+.sidenav_navigation a {
+    font-size: 1.5vw;
+    display: block;
+
+    padding: 0.5vh 0 0.5vh 1vw;
+
+    font-weight: normal;
+    text-decoration: none;
+
+    transition: width 0.3s;
+    white-space: nowrap;
+}
+
+.sidenav_navigation a:hover {
+    font-weight: bold;
+}
+
+.sidenav_themes {
+    padding-top: calc(75vh - 10vw);
+    overflow-x: hidden;
+}
+
+.sidenav_themes h2 {
+    font-size: 1.5vw;
+    display: block;
+
+    padding: 0 0 0 1vw;
+    margin: 0;
+
+    font-weight: bold;
+
+    transition: width 0.3s;
+    white-space: nowrap;
+}
+
+.sidenav_themes button {
+    font-size: 1.25vw;
+    display: block;
+
+    padding: 0.5vh 0 0 1.5vw;
+
+    border: none;
+    background: none;
+
+    transition: width 0.3s;
+    white-space: nowrap;
+}
+
+.sidenav_themes button:hover {
+    cursor: pointer;
+}
+
+.wheel_canvas {
+    display: inline-block;
+    padding: 1.5% 0 0 0;
+}
+
+.menu {
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 10rem);
+    width: 30%;
+    height: 40%;
+    padding-left: 10%;
+}
+
+.menu p {
+    display: block;
+    text-align: center;
+}
+
+.result_text {
+    margin: 0 auto;
+    font-size: 3rem;
+}
+
+.result_display {
+    font-size: 4rem;
+    height: 1.5em;
+    margin: 1rem auto 0 auto;
+}
+
+.menu_buttons_parent button {
+    cursor: pointer;
+}
+
+.generate_button {
+    display: block;
+    width: 15rem;
+    height: 5rem;
+
+    font-size: 3rem;
+
+    margin: 2% auto;
+}
+
+.generate_button:disabled {
+    cursor: not-allowed !important;
+}
+
+.remove_button {
+    display: none;
+    width: 15rem;
+    height: 5rem;
+    
+    font-size: 2rem;
+    margin: 2% auto;
+}
+
+.modify_buttons_parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modify_buttons_parent button {
+    display: block;
+    width: 12rem;
+    height: 4rem;
+    
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
+
+.range_form {
+    display: none;
+    position: fixed; 
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.range_form_content {
+    display: block;
+    position: fixed; 
+    width: 40%;
+    height: 30rem;
+    left: 30%;
+    top: calc(50% - 15rem);
+}
+
+.range_form_content label {
+    font-size: 1.5rem;
+    display: block;
+    margin: 1.5rem auto 0.5rem 2.5rem;
+}
+
+.range_form_content input {
+    font-size: 1.5rem;
+    display: block;
+    margin: 1% auto;
+    width: 90%;
+}
+
+.removed_numbers {
+    font-size: 1.5rem;
+    display: block;
+    width: 90%;
+
+    padding: 0.3rem;
+    margin: 1% auto;
+
+    border: 1px solid black;
+    cursor: not-allowed;
+}
+
+.range_form_button_parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.range_form_button_parent button {
+    display: block;
+    font-size: 1.5rem;
+    margin: 2.5rem 1.5rem;
+    width: 40%;
+}

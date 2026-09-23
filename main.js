@@ -132,7 +132,7 @@ function updateThemeButtons(){
 }
 
 function changeTheme(theme){
-    document.getElementById("theme_link").href = "themes/" + theme + ".css";
+    document.getElementById("theme_link").href = "style/themes/" + theme + ".css";
 
     setPreferredTheme(theme)
 }
