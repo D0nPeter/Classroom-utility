@@ -58,7 +58,7 @@ Those themes are not standard light and dark mode but are rather supposed to be 
 - Woods,
 - Underwater
 
-<sup> Bolded themes are present in the single mode. </sup>
+<sup> Bolded themes are present in the project. </sup>
 
 <br>
 
