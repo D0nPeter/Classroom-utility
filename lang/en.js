@@ -2,8 +2,10 @@ window.translation = {
     "main-title": "Main page",
 
     "modes": "Modes",
-    "single": "Single",
+    "single": "Single number",
     "single-desc": "In this mode you can get a random number from a given range, with the help of a fortune wheel.",
+    "text": "Single text",
+    "text-desc": "In this mode you can get a random text e.g. name from given texts, with the help of a fortune wheel.",
     "lacking-mode": "None",
     "lacking-desc": "This mode will be added soon.",
 
@@ -14,6 +16,15 @@ window.translation = {
     "github-desc": "Public GitHub repository of this project. You can download this whole project from there if you want.",
     "waltz-no-2": "Waltz no. 2",
     "waltz-desc": "A great waltz composed by Dmitri Shostakovich performed by Andre Rieu and his Johann Strauss Orchestra.",
+
+    "navigation": "NAVIGATION",
+    "main-page": "Main Page",
+    "single-mode": "Single Mode",
+    "text-mode": "Single Text",
+
+    "themes": "THEMES",
+    "theme-froggy": "Froggy",
+    "theme-space": "Space",
 
 
     "title-single": "Single mode",
@@ -33,11 +44,5 @@ window.translation = {
     "canvas-not-supported": "Your browser does not support canvas.",
     "remove-number": "Remove the number",
 
-    "navigation": "NAVIGATION",
-    "main-page": "Main Page",
-    "single-mode": "Single Mode",
-
-    "themes": "THEMES",
-    "theme-froggy": "Froggy",
-    "theme-space": "Space",
+    "title-text": "Single text",
 }

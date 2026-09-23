@@ -2,8 +2,10 @@ window.translation = {
     "main-title": "Pagina Domestica",
 
     "modes": "Modi",
-    "single": "Unus Numerus",
+    "single-mode": "Unus Numerus",
     "single-desc": "Hac ratione, numeros singulos rota fortunae ducere potes.",
+    "text": "Una Scriptura",
+    "text-desc": "Hac ratione, rota fortunae adiuvante, textum fortuitum — verbi gratia, nomen — ex textibus datis obtinere potes",
     "lacking-mode": "Nihil",
     "lacking-desc": "Hic modus mox addetur.",
 
@@ -14,6 +16,15 @@ window.translation = {
     "github-desc": "Repositorium publicum huius incepti apud GitHub exstat. Totum inceptum inde depromere potes.",
     "waltz-no-2": "Waltz no. 2",
     "waltz-desc": "Valse magnificum a Demetrio Shostakovich compositum, ab Andrea Rieu eiusque Orchestra Ioannis Strauss praestitum.",
+
+    "navigation": "NAVIGATIO",
+    "main-page": "Pagina Domestica",
+    "single-mode": "Unus Numerus",
+    "text-mode": "Una Scriptura",
+
+    "themes": "FORMA PAGINAE",
+    "theme-froggy": "Ranae",
+    "theme-space": "Cosmos",
 
 
     "title-single": "Unus numerus",
@@ -33,11 +44,6 @@ window.translation = {
     "canvas-not-supported": "Programma tuum navigandi Canvas non sustinet.",
     "remove-number": "Numerum amovere",
 
-    "navigation": "NAVIGATIO",
-    "main-page": "Pagina Domestica",
-    "single-mode": "Unus Numerus",
-
-    "themes": "FORMA PAGINAE",
-    "theme-froggy": "Ranae",
-    "theme-space": "Cosmos",
+    
+    "title-text": "Una Scriptura",
 }

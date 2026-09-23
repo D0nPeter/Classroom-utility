@@ -4,6 +4,8 @@ window.translation = {
     "modes": "Tryby",
     "single": "Jeden numerek",
     "single-desc": "W tym trybie można wylosować pojedyncze numerki, korzystając z koła fortuny.",
+    "text": "Jeden napis",
+    "text-desc": "Wylosuj jeden z podanych przez Ciebie napisów, korzystając z koła fortuny.",
     "lacking-mode": "Brak",
     "lacking-desc": "Ten tryb zostanie niedługo dodany.",
 
@@ -14,6 +16,15 @@ window.translation = {
     "github-desc": "Publiczne repozytorium tego projektu na GitHubie. Można pobrać stamtąd cały ten projekt.",
     "waltz-no-2": "Walc nr 2",
     "waltz-desc": "Wspaniały walc skomponowany przez Dymitra Szostakowicza w wykonaniu Andre Rieu i jego orkiestry Johana Straussa.",
+
+    "navigation": "NAWIGACJA",
+    "main-page": "Strona główna",
+    "single-mode": "Jeden numerek",
+    "text-mode": "Jeden napis",
+
+    "themes": "STYLE",
+    "theme-froggy": "Żabkowy",
+    "theme-space": "Kosmiczny",
 
 
     "title-single": "Jeden numerek",
@@ -34,11 +45,5 @@ window.translation = {
     "remove-number": "Usuń numerek ze zbioru",
     
     
-    "navigation": "NAWIGACJA",
-    "main-page": "Strona główna",
-    "single-mode": "Jeden numerek",
-
-    "themes": "STYLE",
-    "theme-froggy": "Żabkowy",
-    "theme-space": "Kosmiczny",
+    "title-text": "Jeden napis",
 }

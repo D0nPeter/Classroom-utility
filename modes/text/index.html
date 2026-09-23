@@ -11,9 +11,10 @@
 
     <link rel="stylesheet" href="text.css">
     <link rel="stylesheet" href="../../style/common.css">
-    <link rel="stylesheet" href="../../style/themes/froggy.css">
+    <link rel="stylesheet" href="../../style/themes/froggy.css" id="theme_link">
   </head>
-  <body>
+  
+  <body class="background_color">
     <header class="upper_navbar">
       <h1 class="title navbar_text" data-i18n="title-text">Text Mode</h1>
       <button class="language_button_la" onclick="changeLanguage('la')"> </button>
@@ -31,7 +32,8 @@
       <div class="sidenav_navigation">
         <h2 class="navbar_text" data-i18n="navigation"> NAVIGATION </h2>
         <a class="navbar_text" data-i18n="main-page" href="../../index.html"> Main Page </a>
-        <a class="navbar_text" data-i18n="single-mode" href="javascript:void(0)"> Single Mode </a>
+        <a class="navbar_text" data-i18n="single-mode" href="../single/index.html"> Single Mode </a>
+        <a class="navbar_text" data-i18n="text-mode" href="javascript:void(0)"> Text Mode </a>
       </div>
 
       <div class="sidenav_themes">
@@ -43,17 +45,6 @@
 
     <div class="range_form" id="range_form">
       <div class="range_form_content"> 
-        <label for="lowest_number" data-i18n="lowest-number"> Lowest number </label>
-        <input type="number" placeholder="Enter number" data-i18n-placeholder="enter-number" id="lowest_number" required>
-
-        <label for="highest_number" data-i18n="highest-number"> Highest number </b></label>
-        <input type="number" placeholder="Enter number" data-i18n-placeholder="enter-number" id="highest_number" required>
-
-        <label for="excluded_numbers" data-i18n="excluded-numbers"> Excluded numbers </label>
-        <input type="text" placeholder="Enter numbers" data-i18n-placeholder="enter-numbers" id="excluded_numbers">
-
-        <label for="removed-numbers" data-i18n="removed-after-drawn"> Removed after being drawn </label>
-        <p type="text" data-i18n="no-removed-numbers" class="removed_numbers" id="removed_numbers"> No removed numbers </p>
         
         <div class="range_form_button_parent">
           <button onclick="hideRangeForm()" data-i18n="cancel"> Cancel </button>
@@ -64,7 +55,7 @@
     
     <div class="main">
       <canvas id="wheel_canvas" data-i18n="canvas-not-supported" class="wheel_canvas" width="900" height="800" >
-        You browser does not support canvas
+        You browser does not support canvas.
       </canvas>
 
       <div class="menu">

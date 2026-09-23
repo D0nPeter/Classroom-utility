@@ -3,7 +3,9 @@ window.translation = {
 
     "modes": "Modi",
     "single": "Einzelnummer",
-    "single-desc": "In diesem Modus können mithilfe eines Glücksrads einzelne Zahlen ausgelost werden",
+    "single-desc": "In diesem Modus können mithilfe eines Glücksrades einzelne Zahlen ausgelost werden.",
+    "text": "Eine Aufschrift",
+    "text-desc": "In diesem Modus können mithilfe eines Glücksrades eine Aufschrift ausgelost werden.",
     "lacking-mode": "Nichts",
     "lacking-desc": "Dieses Modus wird bald erstellen sein.",
 
@@ -14,6 +16,15 @@ window.translation = {
     "github-desc": "Das öffentliche Repository dieses Projekts auf GitHub. Man kann das gesamte Projekt von dort herunterladen.",
     "waltz-no-2": "Walzer Nr. 2",
     "waltz-desc": "Ein wunderbarer Walzer, komponiert von Dmitri Schostakowitsch, dargeboten von André Rieu und seinem Johann-Strauß-Orchester.",
+
+    "navigation": "NAVIGATION",
+    "main-page": "Startseite",
+    "single-mode": "Einzelnummer",
+    "text-mode": "Eine Aufschrift",
+
+    "themes": "SEITENSTIL",
+    "theme-froggy": "Frösche",
+    "theme-space": "Kosmos",
 
 
     "title-single": "Einzelnummer",
@@ -33,11 +44,6 @@ window.translation = {
     "canvas-not-supported": "Ihr Browser unterstützt Canvas nicht.",
     "remove-number": "Die Nummer entfernen",
 
-    "navigation": "NAVIGATION",
-    "main-page": "Startseite",
-    "single-mode": "Einzelnummer",
-
-    "themes": "SEITENSTIL",
-    "theme-froggy": "Frösche",
-    "theme-space": "Kosmos",
+    
+    "title-text": "Eine Aufschrift",
 }
