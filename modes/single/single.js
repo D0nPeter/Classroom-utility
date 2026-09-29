@@ -147,13 +147,13 @@ function setValues(){
 }
 
 function showRangeForm(){
-    document.getElementById("range_form").style.display = "block";
+    document.getElementById("modification_form").style.display = "block";
 
     updateRangeFormFields();
 }
 
 function hideRangeForm(){
-    document.getElementById("range_form").style.display = "none";
+    document.getElementById("modification_form").style.display = "none";
 }
 
 function updateRangeFormFields(){
@@ -212,7 +212,7 @@ function shuffle(arr){
 }
 
 function spinWheel(){
-    if(stage != 0){
+    if(stage != 0 || numberPool.length == 0){
         return;
     }
     stage = 1;

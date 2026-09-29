@@ -43,12 +43,15 @@
       </div>
     </aside>
 
-    <div class="range_form" id="range_form">
-      <div class="range_form_content"> 
+    <div class="modification_form" id="modification_form">
+      <div class="modification_form_content"> 
+        <h1 data-i18n="text-list">Text list</h1>
+        <div id="modification_form_text_parent" class="modification_form_text_parent">
+        </div> 
         
-        <div class="range_form_button_parent">
-          <button onclick="hideRangeForm()" data-i18n="cancel"> Cancel </button>
-          <button onclick="setValues()" data-i18n="confirm"> Confirm </button>
+        <div class="modification_form_button_parent">
+          <button onclick="cancelChanges()" data-i18n="cancel"> Cancel </button>
+          <button onclick="confirmChanges()" data-i18n="confirm"> Confirm </button>
         </div>
       </div>
     </div>
@@ -59,7 +62,7 @@
       </canvas>
 
       <div class="menu">
-        <p data-i18n="the-number-is" class="result_text body_text"> The number is: </p>
+        <p data-i18n="the-result-is" class="result_text body_text"> The result is: </p>
         <p id="result_display" class="result_display body_text"> </p>
         
         <div class="menu_buttons_parent">
@@ -67,8 +70,7 @@
           <button onclick="removeLastNumber()" id="remove_button" data-i18n="remove-number" class="remove_button"> Remove </button>
     
           <div class="modify_buttons_parent">
-            <button onclick="showRangeForm()" data-i18n="modify-values"> Modify values </button>
-            <button onclick="refillPool()" data-i18n="reset-values"> Reset values </button>
+            <button onclick="showModificationForm()" data-i18n="modify-values"> Modify values </button>
           </div>
         </div>
       </div>

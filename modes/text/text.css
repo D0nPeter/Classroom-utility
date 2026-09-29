@@ -22,7 +22,7 @@
     margin: 0.5rem;
 }
 
-.range_form {
+.modification_form {
     display: none;
     position: fixed; 
     top: 0;
@@ -31,49 +31,86 @@
     height: 100%;
 }
 
-.range_form_content {
+.modification_form_content {
     display: block;
     position: fixed; 
     width: 40%;
-    height: 30rem;
+    height: 45rem;
     left: 30%;
-    top: calc(50% - 15rem);
+    top: calc(37.5% - 15rem);
 }
 
-.range_form_content label {
-    font-size: 1.5rem;
-    display: block;
-    margin: 1.5rem auto 0.5rem 2.5rem;
+.modification_form h1 {
+    font-size: 2rem;
+    margin: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+    justify-self: center;
 }
 
-.range_form_content input {
-    font-size: 1.5rem;
-    display: block;
-    margin: 1% auto;
-    width: 90%;
-}
-
-.removed_numbers {
-    font-size: 1.5rem;
-    display: block;
-    width: 90%;
-
-    padding: 0.3rem;
-    margin: 1% auto;
-
-    border: 1px solid black;
-    cursor: not-allowed;
-}
-
-.range_form_button_parent {
+.modification_form_text_parent {
     display: flex;
+    height: 85%;
+    width: 90%;
+
+    justify-self: center;
+    border: 2px solid black;
+
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+.modification_text_box {
+    display: flex;
+    height: 7%;
+    width: 98%;
+    border: 2px solid black;
+
+    margin-top: 0.25rem;
+
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.modification_text_box p {
+    display: inline-block;
+    width: 70%;
+    margin: 0 0 0 0.5rem;
+
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    align-self: center;
+}
+
+.modification_text_box button {
+    height: 95%;
+    width: 25%;
+    margin: 0;
+}
+
+.modification_text_box input {
+    width: 70%;
+    margin: 0;
+
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.modification_form_button_parent {
+    display: flex;
+    position: absolute;
+
+    justify-self: center;
+
     justify-content: center;
     align-items: center;
 }
 
-.range_form_button_parent button {
+.modification_form_button_parent button {
     display: block;
     font-size: 1.5rem;
-    margin: 2.5rem 1.5rem;
+    margin: .5rem 1.5rem;
     width: 40%;
 }

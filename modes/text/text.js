@@ -57,11 +57,10 @@ let sRotation = 0;
 const selectionTrianglecolor = '#ff2626'
 
 /// 
-// Number generation variables
+// Text constants
 /// 
-const MAX_MAX = 100;
-let min = 1;
-let max = 34;
+const COUNT_MAX = 12;
+const MAX_TEXT_LEN = 36;
 
 /// 
 // Other variables
@@ -69,9 +68,8 @@ let max = 34;
 let canvas;
 let ctx;
 let positionToRemove = -1;
-let numberPool = [];
-// Number states   0 - present    1 - excluded    2 - removed after being drawn
-let numberState = new Array(max+1).fill(0);
+let textPool = ["Option 1"];
+let futurePool = ["Option 1"];
 
 window.addEventListener("load", initSingle, false);
 window.addEventListener("resize", resizeCanvas, false);
@@ -81,9 +79,6 @@ function initSingle(){
     canvas = document.getElementById("wheel_canvas");
     ctx = canvas.getContext("2d");
 
-    numberState = new Array(max+1).fill(0);
-
-    fillPool();
     resizeCanvas();
     requestAnimationFrame(drawWheel);
 }
@@ -112,107 +107,109 @@ function closeSidenav() {
     document.getElementById("sidenav_button_left").style.display = "none";
 }
 
-function setValues(){
-    min = parseInt(document.getElementById("lowest_number").value);
-    max = parseInt(document.getElementById("highest_number").value);
-    min = Math.max(min, 1);
-    max = Math.min(max, MAX_MAX);
-
-    while(numberState.length > max+1){
-        numberState.pop();
-    }
-    while(numberState.length <= max){
-        numberState.push(0);
-    }
-
-    let excludedInput = document.getElementById("excluded_numbers").value;
-    let excludedList = excludedInput.split(",");
-
-    for(let i = 0; i < max; i++){
-        if(numberState[i] == 1){
-            numberState[i] = 0;
-        }
-    }
-
-    for(let i = 0; i < excludedList.length; i++){
-        let num = parseInt(excludedList[i].trim());
-
-        if(!isNaN(num) && num >= min && num <= max){
-            numberState[num] = 1;
-        }
-    }
-
-    fillPool();
+function confirmChanges(){
+    textPool = futurePool;
     hideRangeForm();
 }
 
-function showRangeForm(){
-    document.getElementById("range_form").style.display = "block";
+function cancelChanges(){
+    futurePool = textPool;
+    hideRangeForm();
+}
 
-    updateRangeFormFields();
+function showModificationForm(){
+    document.getElementById("modification_form").style.display = "block";
+    reloadTextBoxes();
 }
 
 function hideRangeForm(){
-    document.getElementById("range_form").style.display = "none";
+    document.getElementById("modification_form").style.display = "none";
 }
 
-function updateRangeFormFields(){
-    document.getElementById("lowest_number").value = min;
-    document.getElementById("highest_number").value = max;
-
-    let excluded_string = "";
-    let removed_string = "";
-    for(let i = 0; i < numberState.length; i++){
-        if(numberState[i] == 1){
-            excluded_string += `${i}, `;
-        }else if(numberState[i] == 2){
-            removed_string += `${i}, `;
-        }
+function addText(){
+    if(textPool.length == COUNT_MAX){
+        return;
     }
 
-    document.getElementById("excluded_numbers").value = excluded_string.substring(0, excluded_string.length - 2);
+    try{
+        futurePool.push(document.getElementById("new_text_input").value.substring(0, MAX_TEXT_LEN-1));
+    }catch{
+        console.warn("Tried adding text with text additon input field absent.");
+    }
 
-    if(removed_string.length){
-        document.getElementById("removed_numbers").textContent = removed_string.substring(0, removed_string.length - 2);
-    }else{
-        document.getElementById("removed_numbers").textContent = window.translation["no-removed-numbers"];
+    reloadTextBoxes();
+}
+
+function removeAtPos(pos){
+    futurePool.splice(pos, 1);
+    reloadTextBoxes();
+}
+
+function removeLastNumber(){
+    if(positionToRemove == -1){
+        return;
+    }
+
+    textPool.splice(positionToRemove, 1);
+    futurePool = textPool
+    
+    positionToRemove = -1;
+    document.getElementById("remove_button").style.display = "none";
+}
+
+function reloadTextBoxes(){
+    let parent = document.getElementById("modification_form_text_parent");
+    while(parent.lastChild != null){
+        parent.removeChild(parent.lastChild);
+    }
+
+    for(let i=0; i<futurePool.length; i++){
+        drawTextBox(i);
+    }
+    if(futurePool.length < COUNT_MAX){
+        drawAddBox();
     }
 }
 
-function fillPool(){
-    numberPool = [];
+function drawTextBox(pos){
+    let modificationTextBox = document.createElement("div");
+    modificationTextBox.setAttribute("class", "modification_text_box");
 
-    for (let i = min; i <= max; i++) {
-        if(numberState[i] == 0){
-            numberPool.push(i);
-        }
-    }
+    let paragraph = document.createElement("p");
+    paragraph.appendChild(document.createTextNode(futurePool[pos]));
+    modificationTextBox.append(paragraph);
 
-    shuffle(numberPool);
+    let button = document.createElement("button");
+    button.appendChild(document.createTextNode("Remove"))
+    button.setAttribute("data-i18n", "remove");
+    button.setAttribute("onclick", `removeAtPos(${pos})`);
+    modificationTextBox.append(button);
+
+    document.getElementById("modification_form_text_parent").append(modificationTextBox);
 }
 
-function refillPool(){
-    for (let i = min; i <= max; i++) {
-        if(numberState[i] == 2){
-            numberState[i] = 0;
-        }
-    }
+function drawAddBox(){
+    let addTextBox = document.createElement("div");
+    addTextBox.setAttribute("class", "modification_text_box");
 
-    fillPool();
-}
+    let input = document.createElement("input");
+    input.setAttribute("id", "new_text_input")
+    input.setAttribute("placeholder", "Enter text");
+    input.setAttribute("data-i18n-placeholder", "enter-text");
+    addTextBox.append(input);
 
-function shuffle(arr){
-    for(let i=1; i<arr.length; i++){
-        let toSwap = Math.floor(Math.random() * (i));
-        
-        arr[i] += arr[toSwap];
-        arr[toSwap] = arr[i] - arr[toSwap];
-        arr[i] -= arr[toSwap];
-    }
+    let button = document.createElement("button");
+    button.appendChild(document.createTextNode("Add"))
+    button.setAttribute("class", "modification_add_button");
+    button.setAttribute("data-i18n", "add");
+    button.setAttribute("onclick", "addText()");
+    addTextBox.append(button);
+
+    document.getElementById("modification_form_text_parent").append(addTextBox);
 }
 
 function spinWheel(){
-    if(stage != 0){
+    if(stage != 0 || textPool.length == 0){
         return;
     }
     stage = 1;
@@ -223,30 +220,18 @@ function spinWheel(){
 
     document.getElementById("result_display").innerText = "";
 
-    rotTime = (Math.floor(Math.random() * numberPool.length) + 0.5) / numberPool.length * singleRotDuration + baseRotTime;
+    rotTime = (Math.floor(Math.random() * textPool.length) + 0.5) / textPool.length * singleRotDuration + baseRotTime;
     midRot = (rotTime * maxVel) % 360;
 }
 
-function removeLastNumber(){
-    if(positionToRemove == -1){
-        return;
-    }
-
-    numberState[numberPool[positionToRemove]] = 2;
-    numberPool.splice(positionToRemove, 1);
-    
-    positionToRemove = -1;
-    document.getElementById("remove_button").style.display = "none";
-}
-
 function displayResult(){
-    let angPerNumber = 360 / numberPool.length;
-    positionToRemove = numberPool.length - Math.ceil(rotation / angPerNumber);
-    let number = numberPool[positionToRemove];
+    let angPerNumber = 360 / textPool.length;
+    positionToRemove = textPool.length - Math.ceil(rotation / angPerNumber);
+    let result = textPool[positionToRemove];
 
     document.getElementById("generate_button").disabled = false;
     document.getElementById("remove_button").style.display = "block";
-    document.getElementById("result_display").innerText = number;
+    document.getElementById("result_display").innerText = result;
 }
 
 /// 
@@ -275,8 +260,8 @@ function resizeCanvas(){
 
 function drawWheelPart(number, color){
     // Rotation is converted into radians for use in trigonometric functions.
-    let sAng = 2*Math.PI * number/numberPool.length + rotation * Math.PI / 180;
-    let eAng = 2*Math.PI * (number+1)/numberPool.length + rotation * Math.PI / 180;
+    let sAng = 2*Math.PI * number/textPool.length + rotation * Math.PI / 180;
+    let eAng = 2*Math.PI * (number+1)/textPool.length + rotation * Math.PI / 180;
 
     let sX = Math.cos(sAng)*radius + width/2;
     let eX = Math.cos(eAng)*radius + width/2;
@@ -298,7 +283,7 @@ function drawWheelPart(number, color){
 function drawText(number, val){
     ctx.save();
     ctx.translate(width/2, height/2);
-    let rotAngle = 2*Math.PI * (number + 0.5)/numberPool.length + rotation * Math.PI / 180
+    let rotAngle = 2*Math.PI * (number + 0.5)/textPool.length + rotation * Math.PI / 180
     ctx.rotate(rotAngle);
 
     /// <todo>
@@ -309,8 +294,8 @@ function drawText(number, val){
     let textRadiusOffset = 0;
     let textVertOffset = baseTextOffset * scalingPercentage;
 
-    if(numberPool.length > textScalingPoolSizeBorder){
-        let poolSizeFactor = textScalingPoolSizeBorder / (numberPool.length);
+    if(textPool.length > textScalingPoolSizeBorder){
+        let poolSizeFactor = textScalingPoolSizeBorder / (textPool.length);
         displayFont = fontSize * poolSizeFactor
         textRadiusOffset = (fontSize - displayFont) / 2;
         textVertOffset *= poolSizeFactor;
@@ -378,7 +363,7 @@ function getPartcolor(number){
     wheelcolors[1] = getColor("wheel_color_2");
     wheelcolors[2] = getColor("wheel_color_3");
 
-    if(numberPool.length%3 != 1 || number != numberPool.length-1){
+    if(textPool.length%3 != 1 || number != textPool.length-1){
         return wheelcolors[number%3];
     }
 
@@ -389,9 +374,9 @@ function drawWheel(timestamp){
     calculateRotation(timestamp);
 
     ctx.clearRect(0, 0, width, height);
-    for(let i=0; i<numberPool.length; i++){
+    for(let i=0; i<textPool.length; i++){
         drawWheelPart(i, getPartcolor(i));
-        drawText(i, numberPool[i]);
+        drawText(i, textPool[i]);
     }
 
     drawSelectionTriangle();

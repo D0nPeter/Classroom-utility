@@ -20,7 +20,7 @@ window.translation = {
     "navigation": "NAVIGATION",
     "main-page": "Main Page",
     "single-mode": "Single Mode",
-    "text-mode": "Single Text",
+    "text-mode": "Text Mode",
 
     "themes": "THEMES",
     "theme-froggy": "Froggy",

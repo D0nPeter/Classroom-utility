@@ -22,7 +22,7 @@
     margin: 0.5rem;
 }
 
-.range_form {
+.modification_form {
     display: none;
     position: fixed; 
     top: 0;
@@ -31,7 +31,7 @@
     height: 100%;
 }
 
-.range_form_content {
+.modification_form_content {
     display: block;
     position: fixed; 
     width: 40%;
@@ -40,13 +40,13 @@
     top: calc(50% - 15rem);
 }
 
-.range_form_content label {
+.modification_form_content label {
     font-size: 1.5rem;
     display: block;
     margin: 1.5rem auto 0.5rem 2.5rem;
 }
 
-.range_form_content input {
+.modification_form_content input {
     font-size: 1.5rem;
     display: block;
     margin: 1% auto;
@@ -65,13 +65,13 @@
     cursor: not-allowed;
 }
 
-.range_form_button_parent {
+.modification_form_button_parent {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.range_form_button_parent button {
+.modification_form_button_parent button {
     display: block;
     font-size: 1.5rem;
     margin: 2.5rem 1.5rem;
