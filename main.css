@@ -110,7 +110,7 @@ body {
 
 .section_nav h1 {
     font-size: 7rem;
-    justify-self: center;
+    text-align: center;
     
     margin: 0;
     padding: 3rem 0;
@@ -155,9 +155,9 @@ body {
 
 .nav_block a {
     display: block;
-    justify-self: center;
     margin: 0;
 
+    text-align: center;
     text-decoration: none;
 
     font-size: 4rem; 
@@ -173,7 +173,7 @@ body {
 
 .section_nav h1 {
     font-size: 5rem;
-    justify-self: center;
+    text-align: center;
     
     margin: 0;
     padding: 3rem 0;
@@ -186,7 +186,7 @@ body {
 
 .section_usefull h1 {
     font-size: 3rem;
-    justify-self: center;
+    text-align: center;
     
     margin: 0;
     padding: 2rem 0;
