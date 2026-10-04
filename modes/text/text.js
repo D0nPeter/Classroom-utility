@@ -18,15 +18,16 @@ const heightPercentage = 0.85;
 const baseWidth = 900;
 const baseHeight = 800;
 const baseRadius = 400;
-const baseTextRadius = 330;
+const baseTextOuterOffset = 65;
 const baseSelTriangleWidth = 30;
 const baseSelTriangleHeight = 40;
-const baseFontSize = 100;
+const baseFontSize = 50;
 
-const baseTextOffset = 40;
+const baseTextOffset = 20;
 
 // If the pool size is bigger than this number text is scaled down.
 const textScalingPoolSizeBorder = 12;
+const textScalingLengthFactor = 10;
 
 ///
 //  Wheel display variables
@@ -35,7 +36,7 @@ let scalingPercentage = 1;
 let width = baseWidth;
 let height = baseHeight;
 let radius = baseRadius;
-let textRadius = baseTextRadius;
+let textOuterOffset = baseTextOuterOffset;
 let selTriangleWidth = baseSelTriangleWidth;
 let selTriangleHeight = baseSelTriangleHeight;
 let fontSize = baseFontSize;
@@ -68,8 +69,8 @@ const MAX_TEXT_LEN = 36;
 let canvas;
 let ctx;
 let positionToRemove = -1;
-let textPool = ["Option 1"];
-let futurePool = ["Option 1"];
+let textPool = ["Option 1", "Option 2", "Option 3"];
+let futurePool = [];
 
 window.addEventListener("load", initSingle, false);
 window.addEventListener("resize", resizeCanvas, false);
@@ -78,6 +79,10 @@ window.addEventListener("themeChanged", themeChanged, false);
 function initSingle(){
     canvas = document.getElementById("wheel_canvas");
     ctx = canvas.getContext("2d");
+
+    textPool.forEach( text => {
+        futurePool.push(text);
+    })
 
     resizeCanvas();
     requestAnimationFrame(drawWheel);
@@ -248,7 +253,7 @@ function resizeCanvas(){
     width = baseWidth * scalingPercentage;
     height = baseHeight * scalingPercentage;
     radius = baseRadius * scalingPercentage;
-    textRadius = baseTextRadius * scalingPercentage;
+    textOuterOffset = baseTextOuterOffset * scalingPercentage;
     selTriangleWidth = baseSelTriangleWidth * scalingPercentage;
     selTriangleHeight = baseSelTriangleHeight * scalingPercentage;
     fontSize = baseFontSize * scalingPercentage;
@@ -280,7 +285,7 @@ function drawWheelPart(number, color){
     ctx.fill();
 }
 
-function drawText(number, val){
+function drawText(number, text){
     ctx.save();
     ctx.translate(width/2, height/2);
     let rotAngle = 2*Math.PI * (number + 0.5)/textPool.length + rotation * Math.PI / 180
@@ -291,20 +296,27 @@ function drawText(number, val){
     /// </todo>
 
     let displayFont = fontSize;
-    let textRadiusOffset = 0;
     let textVertOffset = baseTextOffset * scalingPercentage;
 
     if(textPool.length > textScalingPoolSizeBorder){
-        let poolSizeFactor = textScalingPoolSizeBorder / (textPool.length);
-        displayFont = fontSize * poolSizeFactor
-        textRadiusOffset = (fontSize - displayFont) / 2;
+        let poolSizeFactor = textScalingPoolSizeBorder / textPool.length;
+        displayFont *= poolSizeFactor
         textVertOffset *= poolSizeFactor;
     }
+
+    if(text.length > textScalingLengthFactor){
+        let lenghtFactor = textScalingLengthFactor / text.length;
+        displayFont *= lenghtFactor;
+        textVertOffset *= lenghtFactor;
+    }
+
+    let textLength = text.length * displayFont/5; 
+    let textRadius = radius - textLength - textOuterOffset;
 
     ctx.font = `${displayFont}px Arial`;
     ctx.fillStyle = "#FFFFFF";
     ctx.textAlign = "center";
-    ctx.fillText(val, textRadius + textRadiusOffset, textVertOffset);
+    ctx.fillText(text, textRadius, textVertOffset);
 
     ctx.restore();
 }

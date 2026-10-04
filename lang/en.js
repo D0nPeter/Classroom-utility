@@ -45,4 +45,5 @@ window.translation = {
     "remove-number": "Remove the number",
 
     "title-text": "Single text",
+    "remove-option": "Remove",
 }

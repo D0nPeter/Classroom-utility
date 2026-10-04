@@ -46,4 +46,5 @@ window.translation = {
     
     
     "title-text": "Jeden napis",
+    "remove-option": "Usuń tą opcję"
 }

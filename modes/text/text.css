@@ -1,3 +1,10 @@
+.result_display {
+    font-size: 2.5rem;
+    height: 1.5em;
+    white-space: nowrap;
+    margin: 1rem auto 0 auto;
+}
+
 .remove_button {
     display: none;
     width: 15rem;

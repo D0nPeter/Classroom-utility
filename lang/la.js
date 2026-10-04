@@ -46,4 +46,5 @@ window.translation = {
 
     
     "title-text": "Una Scriptura",
+    "remove-option": "Amovere",
 }

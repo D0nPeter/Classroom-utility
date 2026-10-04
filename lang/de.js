@@ -46,4 +46,5 @@ window.translation = {
 
     
     "title-text": "Eine Aufschrift",
+    "remove-option": "Die Option entfernen",
 }

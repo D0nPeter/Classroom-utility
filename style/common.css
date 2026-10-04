@@ -175,12 +175,6 @@ body {
     font-size: 3rem;
 }
 
-.result_display {
-    font-size: 4rem;
-    height: 1.5em;
-    margin: 1rem auto 0 auto;
-}
-
 .menu_buttons_parent button {
     cursor: pointer;
 }
