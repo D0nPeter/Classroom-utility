@@ -10,9 +10,13 @@ body {
 
 .theme_dropdown {
     position: absolute;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
 
     width: 8vmin;
-    height: 10vmin;
+    height: auto;
     top: 1vmin;
     left: 1vmin;
 }
@@ -31,12 +35,12 @@ body {
 
 .theme_dropdown_content {
     display: none;
+    position: absolute;
+    top: 100%;
 
     width: 6vmin;
     height: 15vmin;
 
-    justify-self: center;
-    justify-content: left;
     flex-direction: column;
     align-items: center;
 
@@ -57,6 +61,10 @@ body {
 
 .language_dropdown {
     position: absolute;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
 
     width: 10vmin;
     height: 6vmin;
@@ -66,19 +74,20 @@ body {
 
 .language_dropdown button {
     padding: 0;
-    border: 0;
+    border: none;
     background-size: cover;
+    background-color: transparent;
 }
 
 .language_button {
     width: 10vmin;
     height: 6vmin;
-
-    margin-bottom: 1vmin;
 }
 
 .language_dropdown_content {
     display: none;
+    position: absolute;
+    top: 120%;
 
     width: 7.5vmin;
     height: 20vmin;

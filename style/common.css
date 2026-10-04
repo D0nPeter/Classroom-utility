@@ -23,6 +23,7 @@ body {
     width: 10vmin;
     height: 6vmin;
 
+    background-color: transparent;
     background-size: cover;
     border: none;
     cursor: pointer;
