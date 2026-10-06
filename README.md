@@ -77,5 +77,5 @@ I plan to improve this project constantly. Goals for the future are shown in the
 |:--------------------|:-------------|:--------|
 | Main Page           | <ul> <li> Image at the top of the website. </li> </ul> | <ul>  </ul> |
 | Single Mode         | <ul> <li> Different backgrounds based on the current theme. </li> </ul> | <ul> </ul> |
-| Text Mode           | <ul> <li> Adding mode of the website that lets you get random text value from fortune wheel. </li> <ul> | | 
+| Text Mode           | <ul> </ul> | <ul> </ul> | 
 
