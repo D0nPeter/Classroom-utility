@@ -76,6 +76,6 @@ I plan to improve this project constantly. Goals for the future are shown in the
 | Part of the website | New features | Changes |
 |:--------------------|:-------------|:--------|
 | Main Page           | <ul> <li> Image at the top of the website. </li> </ul> | <ul>  </ul> |
-| Single Mode         | <ul> <li> Different backgrounds based on the current theme. </li> </ul> | <ul> </ul> |
-| Text Mode           | <ul> </ul> | <ul> </ul> | 
+| Single Mode         | <ul> <li> Different backgrounds based on the current theme. </li> </ul> | <ul> <li> Change styling for modification form. </li> </ul> |
+| Text Mode           | <ul> </ul> | <ul> <li> Change styling for modification form. </li> </ul> | 
 

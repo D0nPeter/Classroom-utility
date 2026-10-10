@@ -185,7 +185,7 @@ function drawTextBox(pos){
     modificationTextBox.append(paragraph);
 
     let button = document.createElement("button");
-    button.appendChild(document.createTextNode("Remove"))
+    button.appendChild(document.createTextNode(window.translation["remove"]))
     button.setAttribute("data-i18n", "remove");
     button.setAttribute("onclick", `removeAtPos(${pos})`);
     modificationTextBox.append(button);
@@ -199,12 +199,12 @@ function drawAddBox(){
 
     let input = document.createElement("input");
     input.setAttribute("id", "new_text_input")
-    input.setAttribute("placeholder", "Enter text");
+    input.setAttribute("placeholder", window.translation["enter-text"]);
     input.setAttribute("data-i18n-placeholder", "enter-text");
     addTextBox.append(input);
 
     let button = document.createElement("button");
-    button.appendChild(document.createTextNode("Add"))
+    button.appendChild(document.createTextNode(window.translation["add"]))
     button.setAttribute("class", "modification_add_button");
     button.setAttribute("data-i18n", "add");
     button.setAttribute("onclick", "addText()");

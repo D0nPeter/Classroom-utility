@@ -42,14 +42,14 @@
     display: block;
     position: fixed; 
     width: 40%;
-    height: 45rem;
+    height: 90%;
     left: 30%;
-    top: calc(37.5% - 15rem);
+    top: 5%;
 }
 
 .modification_form h1 {
-    font-size: 2rem;
-    margin: 0.5rem;
+    font-size: 5vmin;
+    margin: 0.5vmin;
     font-family: Arial, Helvetica, sans-serif;
 
     text-align: center;
@@ -61,7 +61,7 @@
     width: 90%;
 
     margin: 0 auto;
-    border: 2px solid black;
+    border: .25vmin solid black;
 
     flex-direction: column;
     justify-content: left;
@@ -72,9 +72,9 @@
     display: flex;
     height: 7%;
     width: 98%;
-    border: 2px solid black;
+    border: .25vmin solid black;
 
-    margin-top: 0.25rem;
+    margin-top: 0.5vmin;
 
     align-content: center;
     flex-wrap: wrap;
@@ -84,9 +84,9 @@
 .modification_text_box p {
     display: inline-block;
     width: 70%;
-    margin: 0 0 0 0.5rem;
+    margin: 0 0 0 1vmin;
 
-    font-size: 1.5rem;
+    font-size: 3vmin;
     font-family: Arial, Helvetica, sans-serif;
     align-self: center;
 }
@@ -95,13 +95,14 @@
     height: 95%;
     width: 25%;
     margin: 0;
+    font-size: 2vmin;
 }
 
 .modification_text_box input {
     width: 70%;
     margin: 0;
 
-    font-size: 1.5rem;
+    font-size: 3vmin;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -116,7 +117,7 @@
 
 .modification_form_button_parent button {
     display: block;
-    font-size: 1.5rem;
-    margin: .5rem 1.5rem;
+    font-size: 3vmin;
+    margin: 1vmin 3vmin;
     width: 40%;
 }

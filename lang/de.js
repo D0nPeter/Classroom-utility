@@ -47,4 +47,9 @@ window.translation = {
     
     "title-text": "Eine Aufschrift",
     "remove-option": "Die Option entfernen",
+    "text-list": "Liste",
+    "the-result-is": "Ergebnis ist:",
+    "enter-text": "Gib eine Aufchrift ein",
+    "add": "Hinzufüg",
+    "remove": "Entfern",
 }

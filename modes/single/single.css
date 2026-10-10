@@ -40,33 +40,33 @@
     display: block;
     position: fixed; 
     width: 40%;
-    height: 30rem;
+    height: 62%;
     left: 30%;
-    top: calc(50% - 15rem);
+    top: 17.5%;
 }
 
 .modification_form_content label {
-    font-size: 1.5rem;
+    font-size: 3vmin;
     display: block;
-    margin: 1.5rem auto 0.5rem 2.5rem;
+    margin: 3vmin auto 1vmin 5vmin;
 }
 
 .modification_form_content input {
-    font-size: 1.5rem;
+    width: 90%;
     display: block;
     margin: 1% auto;
-    width: 90%;
+    font-size: 3vmin;
 }
 
 .removed_numbers {
-    font-size: 1.5rem;
+    font-size: 3vmin;
     display: block;
     width: 90%;
 
-    padding: 0.3rem;
+    padding: .6vmin;
     margin: 1% auto;
 
-    border: 1px solid black;
+    border: 0.2vmin solid black;
     cursor: not-allowed;
 }
 
@@ -78,7 +78,7 @@
 
 .modification_form_button_parent button {
     display: block;
-    font-size: 1.5rem;
-    margin: 2.5rem 1.5rem;
+    font-size: 3vmin;
+    margin: 5vmin 3vmin;
     width: 40%;
 }

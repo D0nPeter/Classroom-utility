@@ -5,7 +5,7 @@ window.translation = {
     "single-mode": "Unus Numerus",
     "single-desc": "Hac ratione, numeros singulos rota fortunae ducere potes.",
     "text": "Una Scriptura",
-    "text-desc": "Hac ratione, rota fortunae adiuvante, textum fortuitum — verbi gratia, nomen — ex textibus datis obtinere potes",
+    "text-desc": "Hac ratione, rota fortunae adiuvante, textum fortuitum — verbi gratia, nomen — ex textibus datis obtinere potes.",
     "lacking-mode": "Nihil",
     "lacking-desc": "Hic modus mox addetur.",
 
@@ -47,4 +47,9 @@ window.translation = {
     
     "title-text": "Una Scriptura",
     "remove-option": "Amovere",
+    "text-list": "Album de Scripturae",
+    "the-result-is": "Instructa est:",
+    "enter-text": "Scriptura illud",
+    "add": "Adde",
+    "remove": "Amovere",
 }

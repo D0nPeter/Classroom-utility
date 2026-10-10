@@ -46,4 +46,8 @@ window.translation = {
 
     "title-text": "Single text",
     "remove-option": "Remove",
+    "text-list": "Text list",
+    "the-result-is": "The result is:",
+    "add": "",
+    "remove": "",
 }

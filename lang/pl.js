@@ -46,5 +46,10 @@ window.translation = {
     
     
     "title-text": "Jeden napis",
-    "remove-option": "Usuń tą opcję"
+    "remove-option": "Usuń tą opcję",
+    "text-list": "Lista napisów",
+    "the-result-is": "Wynikiem jest:",
+    "enter-text": "Wprowadź tekst",
+    "add": "Dodaj",
+    "remove": "Usuń",
 }
