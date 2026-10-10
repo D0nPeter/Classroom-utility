@@ -3,7 +3,7 @@ Classrom Utility
 
 ## Aim of the project 🎯
 Aim of the project is to create website, that would help teachers with such activities as picking a random student or assigning pupils into groups. 
-As tasks like choosing random person and grouping people are also common outside classroom, this project also aims to help everyone in need of asistance with those tasks.  
+As tasks like choosing random thing and grouping people are also common outside classroom, this project also aims to help everyone in need of asistance with those tasks.  
 
 ### Customization
 Another goal is for the website is to be customizable, to appeal to wide audience. 
@@ -20,14 +20,17 @@ I used AI in a few cases to search for bugs or validate execution of my ideas, b
 
 <br>
 
-## Single number random generator 🎲
+## Single number module 🎲
 This module of the website, supports generating single random number from a given range with the ability to remove certain numbers from the pool (e.g. students not present). 
 Additionally, it allows you to remove the number from the pool after being drawn or revert the pool to it's original state.  
-It is the only working module of the website at the moment, however this will change soon.
 
-### Wheel 🛞
-Single mode of the website utilizes a fortune wheel to generate numbers in an entertaining way. 
-This wheel is affected by all the changes in the number pool or theme of the website. 
+## Text module 📜
+This module of the website, allows to pick a random text piece (called string in IT) from up to 12 texts specified by the user. Every text piece is limited up to 36 characters.  
+Main goal of the mode is to choose object from a pool without the need to order them and use number mode. 
+
+## Wheel 🛞
+Both modes of the website utilizes a fortune wheel in order to be more entertaining. 
+This wheel is affected by all the changes in both text and number pool or theme of the website. 
 It also scales to remain around the same size on all screens.
 
 <br>
@@ -39,6 +42,7 @@ The table below shows the current state of implentation of different features of
 |:--------------------|:--------------:|:------:|:--------------:|
 | Main Page           |       YES      |   YES  |       YES      |
 | Single Mode         |       YES      |   YES  |       NO       |
+| Text Mode           |       YES      |   YES  |       NO       |
 
 ### Languages 📖
 Currently website supports 4 languages. Those languages are:  
@@ -52,7 +56,7 @@ Should you be willing to help with this task, contact me at <PiStudio124@gmail.c
 
 ### Themes 🐸
 Website supports changing themes. 
-Those themes are not standard light and dark mode but are rather supposed to be more cheerfull, based on locations from different tales like:
+Those themes are not standard light and dark mode but are rather supposed to be more cheerfull, inspired by different tales and sceneries like:
 - **Frogs**,
 - **Space**,
 - Woods,
