@@ -48,6 +48,7 @@ window.translation = {
     "remove-option": "Remove",
     "text-list": "Text list",
     "the-result-is": "The result is:",
-    "add": "",
-    "remove": "",
+    "enter-text": "Enter text",
+    "add": "Add",
+    "remove": "Remove",
 }
