@@ -2,7 +2,7 @@ window.translation = {
     "main-title": "Pagina Domestica",
 
     "modes": "Modi",
-    "single-mode": "Unus Numerus",
+    "single": "Unus Numerus",
     "single-desc": "Hac ratione, numeros singulos rota fortunae ducere potes.",
     "text": "Una Scriptura",
     "text-desc": "Hac ratione, rota fortunae adiuvante, textum fortuitum — verbi gratia, nomen — ex textibus datis obtinere potes.",

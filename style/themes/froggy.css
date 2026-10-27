@@ -1,19 +1,53 @@
 /*
-    UTILITY CLASSES
+    UNIVERSAL SECTION
 */
 
 .background_color {
     background-color: #88c083;
 }
 
-.body_text {
-    font-family: Arial, Helvetica, sans-serif;
+.text_font {
     color: #00420e;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar_text {
     color: white;
     font-family: Arial, Verdana;
+}
+
+.menu_button {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #008800;
+    border: none;
+}
+
+.menu_button:hover {
+    background-color: #00680099;
+}
+
+.menu_input_field {
+    color: #00420e;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #009900;
+    border: 0.2vmin solid #00420e;
+}
+
+.menu_input_field::placeholder {
+    color: #155824
+}
+
+.wheel_color_1 {
+    color: #00420e;
+}
+
+.wheel_color_2 {
+    color: #00aa00
+}
+
+.wheel_color_3 {
+    color: #008800;
 }
 
 /*
@@ -54,34 +88,18 @@
     background-image: url('../../image/buttons/ArrowRight_froggy.svg');
 }
 
-.menu_buttons_parent button {
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    background-color: #008800;
-    border: none;
-}
-
-.menu_buttons_parent button:hover {
-    background-color: #006800;
-}
-
 .modification_form {
     background-color: #00000088;
 }
 
 .modification_form_content {
-    background-color: white;
     border: 5px solid black;
 }
 
-.wheel_color_1 {
-    color: #00420e;
-}
+/*
+    SECTION TEXT MODE
+*/
 
-.wheel_color_2 {
-    color: #00aa00
-}
-
-.wheel_color_3 {
-    color: #008800;
+.modification_text_box {
+    background-color: #39a839;
 }

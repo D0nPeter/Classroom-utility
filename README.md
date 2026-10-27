@@ -9,13 +9,13 @@ As tasks like choosing random thing and grouping people are also common outside 
 Another goal is for the website is to be customizable, to appeal to wide audience. 
 This, as of now, includes 4 available languages and 2 themes. 
 
-### Skill development 
+### Skill development
 This project was created with no previous knowledge of *html*, *css*, *javascript*, *markdown* or *vector graphics*. 
 It's third goal was to learn basics of web development, utilizing available resources like **MDN Web Docs**, **W3Schools** and **StackOverflow**. 
 This project stands as a testimony, that this goal was achieved. 
 
-### AI disclaimer 
-As I am against *turning thinking to machines*, code in this project was mostly hand written. 
+### AI disclaimer
+As this project's goal was to learn web development, code in this project was mostly hand written. 
 I used AI in a few cases to search for bugs or validate execution of my ideas, because, as I have mentioned above, my web development skills were developing alongside the project.
 
 <br>
@@ -79,7 +79,6 @@ I plan to improve this project constantly. Goals for the future are shown in the
 
 | Part of the website | New features | Changes |
 |:--------------------|:-------------|:--------|
-| Main Page           | <ul> <li> Image at the top of the website. </li> </ul> | <ul>  </ul> |
-| Single Mode         | <ul> <li> Different backgrounds based on the current theme. </li> </ul> | <ul> <li> Change styling for modification form. </li> </ul> |
-| Text Mode           | <ul> </ul> | <ul> <li> Change styling for modification form. </li> </ul> | 
-
+| Main Page           | <ul> <li> Image at the top of the page. </li> </ul> | <ul>  </ul> |
+| Single Mode         | <ul> <li> Different backgrounds based on the current theme. </li> </ul> | <ul> </ul> |
+| Text Mode           | <ul> </ul> | <ul> </ul> | 
