@@ -68,8 +68,8 @@ Those themes are not standard light and dark mode but are rather supposed to be 
 
 ## Working website 🌐
 For those that do not want or know how to download this project from github you can check it out on my website.  
-If you want to visit main page of the website go [here](https://classroom-utility.qbitx.io/).  
-If you want to check out single mode go [here](https://classroom-utility.qbitx.io/single/).  
+If you want to visit main page of the website go [here](https://classroom-utility.pistudio.net/).  
+If you want to check out single mode go [here](https://classroom-utility.pistudio.net/single/).  
 Those websites are updated from time to time, yet the newest version of the project is always available on [github](https://github.com/D0nPeter/Classroom-utility/). 
 
 <br>
